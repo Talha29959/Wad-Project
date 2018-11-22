@@ -1,0 +1,15 @@
+div {
+    text-align: justify;
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+h1
+{
+    margin-left: 550px;
+}
