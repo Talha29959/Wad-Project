@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<h1 id="contact">Contact Us</h1>
+<form>
+    <div class="col-5">
+        <label for="name"><b>Name:</b></label>
+        <input type="text" class="form-control" id="name">
+    </div>
+    <div class="col-5">
+        <label for="email"><b>Email:</b></label>
+        <input type="text" class="form-control" id="email">
+    </div>
+    <b>Phone:</b>
+    <div class="form-group row">
+        <div class="col-1 ">
+            <!-- <label for="email"><b>Phone:</b></label> -->
+            <select class="form-control" id="c_code" >
+                <option>+91</option>
+                <option>+44</option>
+                <option selected>+92</option>
+                <option>+76</option>
+            </select>
+        </div>
+        <div class="col-1">
+            <select class="form-control" id="m_code" >
+                <option selected>Code</option>
+                <option>301</option>
+                <option>321</option>
+                <option>343</option>
+            </select>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="col-5">
+        <label for="started"><b>What are your concering issues ?</b></label>
+        <input type="text" class="form-control" id="started" placeholder="Get Started">
+    </div>
+    <br>
+    <div class="form-group">
+        <textarea class="form-control" rows="5" placeholder="Please enter your message" id="comment"></textarea>
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+</body>
