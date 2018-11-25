@@ -5,14 +5,24 @@
     background-color: #1e90ff;
 
 }
+body {
+    background-image: url("images/g.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: large;
+
+}
 .rana
 {
-    text-decoration: underline;
+   /* text-decoration: underline;*/
     padding-left: 35%;
 }
 .f_size
 {
     font-size: 20px;
+    color: dodgerblue;
 }
 .f_size1
 {
