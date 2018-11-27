@@ -1,18 +1,44 @@
 #header
 {
+    margin-top: 50px;
     height: 45px;
     padding-top: 10px;
     background-color: #1e90ff;
 
 }
-.rana
+body {
+//    background-image: url("images/g.jpg");
+   // background-color: #cccccc;
+    background-color: #236c63;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: large;
+
+}
+
+#continue
 {
-    text-decoration: underline;
-    padding-left: 35%;
+   padding-left: 70%;
+}
+font{
+    color: black;
+}
+input, textarea {
+    background-color : wheat;
+}
+#d1{
+    margin-top: 10px;
+    background-image: url("images/g.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .f_size
 {
     font-size: 20px;
+    color: dodgerblue;
 }
 .f_size1
 {

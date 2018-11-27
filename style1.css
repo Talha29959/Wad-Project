@@ -1,3 +1,9 @@
+@media only screen and (max-width: 768px) {
+[class*="col-"] {
+    width: 100%;
+}
+
+}
 .caption div {
     box-shadow: 0 0 5px #C8C8C8;
     transition: all 0.3s ease 0s;
@@ -70,7 +76,6 @@ body {font-family: Verdana,sans-serif;}
 .navtab-default{
   color: black;
   background-color: blue;
-
 }
 * {margin: 0; padding: 0;}
 
@@ -268,8 +273,8 @@ header p {
   height: auto;
   text-align: left;
   padding-bottom: 30px;
-  margin-left: -100px;
-  margin-right: -100px;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 0;
   margin-top: 0;
   position: relative;
@@ -364,6 +369,7 @@ color: #1167c2;
 
 .vid1{
   margin-top: 5px;
+    float:left;
 }
 
 .bg-gray {
