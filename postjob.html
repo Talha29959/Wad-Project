@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style4.css">
+    <title>Post A Job</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
+<body>
 
-<h1>POST A JOB</h1>
-<body >
-<div>
+<nav class="navbar navbar-inverse navbar-fixed-top" style="margin: 0">
+    <div class="container-fluid">
+        <div class="navbar-header col-">
+            <b><a class="navbar-brand" href="index.html">RozeeRoti.pk</a></b>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active col-"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li class="col-"><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
+            <li class="col-"><a href="postjob.html">Post a Job</a></li>
+            <li class="col-"><a href="contactus.html"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
+            <li class="col-"><a href="login.html"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
+            <li class="col-"><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="ibt-1">
 
+    <h2>Post The Job</h2>
     <form>
-        <br>
-        JOB TITLE : <input type="text" name="name" style="margin-left:56px"><br><br>
-        JOB DESCRIPTION: <textarea name="message" rows="5" cols="30" name="email" ></textarea><br><br>
-        SALARY : <input type="text" name="salary" style="margin-left:70px"><br><br>
-        <input type="submit">
+        <input type="text" class="ibt-2" placeholder="Job Title:"required><br>
+        <input type="text"  class="ibt-2" placeholder=" Job Description:"required>
+        <input type="text"  class="ibt-2" placeholder="Skills Required:"required>
+        <input type="text"  class="ibt-2" placeholder="Minimum Qualification:"required>
+        <input type="text"  class="ibt-2" placeholder="Minimum Experience:"required>
+        <input type="text"  class="ibt-2" placeholder="Expected Salary:"required>
+        <input type="text"  class="ibt-2" placeholder="Office Location:"required>
+        <input type="submit" class="ibt-3" value="Submit">
     </form>
 </div>
-
 </body>
-
 </html>
