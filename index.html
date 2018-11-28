@@ -10,39 +10,43 @@
 <meta name="author" content="Hege Refsnes">
 <meta name="description" content="Glyphicon support for Twitter's Bootstrap">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style1.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style1.css">
 </head>
 
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top" style="margin: 0">
 <div class="container-fluid">
-	<div class="navbar-header col-">
+	<div class="navbar-header col-lg-6.4">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
 	<b><a class="navbar-brand" href="index.html">RozeeRoti.pk</a></b>
 	</div>
-	<ul class="nav navbar-nav navbar-right">
-    <li class="active col-"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-	<li class="col-"><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
-	<li class="col-"><a href="postjob.html">Post a Job</a></li>
-  <li class="col-"><a href="contactus.html"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
-  <li class="col-"><a href="login.php"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
-  <li class="col-"><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
+	<ul class="nav navbar-nav navbar-right collapse navbar-collapse col-lg-5.6" id="myNavbar">
+    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+	<li class=""><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
+	<li class=""><a href="postjob.html">Post a Job</a></li>
+  <li class=""><a href="contactus.html"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
+  <li class=""><a href="login.html"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
+  <li class=""><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
 	</ul>
 	</div>
 </nav>
-<div class="jumbotron text-center col-" style="background-image: url('images/g.jpg');height: 100%; width: 100%;background-position: center;background-size: cover;background-repeat: no-repeat;">
-<h1 class="col-" style="color: darkgray">One million success stories.</h1>
-<h2 class="col-" style="color: darkgray">Start yours today.</h2>
+<div class="jumbotron text-center" style="background-image: url('images/g.jpg');height: 100%; width: 100%;background-position: center;background-size: cover;background-repeat: repeat;">
+<h1 class="col-lg-12 col-s-12" style="color: darkgray">One million success stories.</h1>
+<h2 class="col-lg-12" style="color: darkgray">Start yours today.</h2>
 <br>
 <br>
 
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
+  <div class="overlay-content col-lg-12">
   <form method="post" action="ct.php">
   <input class="sa" class="sa1" type="text" name="search" placeholder="Job Title,Skill or Company" size="48"  maxlength="20">
   <select class="sa">
@@ -55,7 +59,7 @@
   <option value="40000">40,000</option>
   <option value="45000">45,000</option>
   </select>
-  <select class="sa">
+  <select class="sa col-">
     <option value="city" selected>City</option>
     <option value="abt" >Abbottabad</option>
     <option value="blpr" >Bahawalpur</option>
@@ -96,7 +100,7 @@ function closeNav() {
 
 <div id="container">
 
-    <div class="photobanner">
+    <div class="photobanner col-lg-12">
       <img class="first" src="images/daewoo.jpg" alt="" height="50px" width="150px" title="Daewoo Express" class="boder" />
       <img src="images/finca.png" alt="" height="50px" width="150px" title="Finca" class="boder" />
       <img src="images/berger.jpg" alt="" height="50px" width="150px" title="Berger" class="boder"/>
@@ -113,43 +117,22 @@ function closeNav() {
     </div>
 
 </div>
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
 
 <ul class="nav nav-tabs" style="background-color: #1167c2; margin-top:0; color: black">
-<li><h3 style="color: white; margin-left: 15px">  Browse Jobs in Pakistan</h3></li>
-<li style="margin-left:30px "> <a href="#byfunctions" data-toggle="tab"><h4 style="color: darkgray">By Functions</h4> </a></li>
-<li> <a href="#bycity" data-toggle="tab"><b><h4 style="color: darkgray">By City</h4></b></a></li>
-<li> <a href="#byindustry" data-toggle="tab"><h4 style="color: darkgray">By Industry</h4></a></li>
-<li> <a href="#bycompany" data-toggle="tab"><h4 style="color: darkgray">By Company</h4></a></li>
+<li class="col-lg-3"><h3 style="color: white; margin-left: 15px">  Browse Jobs in Pakistan</h3></li>
+<li class="col-lg-2" style="margin-left:30px "> <a href="#byfunctions" data-toggle="tab"><h4 style="color: darkgray">By Functions</h4> </a></li>
+<li class="col-lg-2"> <a href="#bycity" data-toggle="tab"><b><h4 style="color: darkgray">By City</h4></b></a></li>
+<li class="col-lg-2"> <a href="#byindustry" data-toggle="tab"><h4 style="color: darkgray">By Industry</h4></a></li>
+<li class="col-lg-2"> <a href="#bycompany" data-toggle="tab"><h4 style="color: darkgray">By Company</h4></a></li>
 </ul>
 
-<div class="vid">
+<div class="vid" col-lg-9>
 
 <div class="tab-content">
 <div id="byfunctions" class="tab-pane fade in active">
 <div class="container" style="background-color: white; color: black">
 <div class="row">
-<div class="col-md-3">
+<div class="col-lg-3">
 <ul>
 <a href="sales.php"><h5 style="margin-top: 22px" title="Sales">Sales (345)</h5></a>
 <a href="accounts.php"><h5 style="margin-top: 22px" title="Accounts">Accounts & Finance (345)</h5></a>
@@ -258,8 +241,8 @@ function showSlides() {
 </div>
 </div>
 
-<div class="vid1 col-md-3">
-  <iframe width="auto" height="100px" src="https://www.youtube.com/embed/O5AO4qIsOdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="vid1 col-lg-3">
+  <iframe  src="https://www.youtube.com/embed/O5AO4qIsOdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 </div>
@@ -267,29 +250,27 @@ function showSlides() {
 <br>
 <div class="container" style="margin-top: 50px">
 <div class="row">
-<div class="col-md-2">
+<div class="col-lg-2">
 <img src="images/teacher.jpg" height="200px" width="200px">
 <h5 style="margin-left: 75px">Teacher</h5>
 </div>
-<div class="col-md-2">
+<div class="col-lg-2">
 <img src="images/women1.jpg" style="margin-top: 0" height="200px" width="200px">
 <h5 style="margin-left:70px">Women</h5>
   </div>
-<div class="col-md-2">
+<div class="col-lg-2">
   <img src="images/media.jpg" style="margin-top: 0" height="200px" width="200px">
 <h5 style="margin-left: 70px">Media</h5>
 </div>
-<div class="col-md-2">
+<div class="col-lg-2">
 <img src="images/healthcare.jpg" style="margin-top: 0" height="200px" width="200px">
 <h5 style="margin-left: 70px">Healthcare</h5>
 </div>
-<div class="col-md-2">
-
+<div class="col-lg-2">
 <img src="images/ngo.jpg" style="margin-top: 0" height="200px" width="200px">
 <h5 style="margin-left: 70px">NGOS</h5>
 </div>
-<div class="col-md-2">
-
+<div class="col-lg-2">
 <img src="images/accountant.jpg" style="margin-top: 0" height="200px" width="200px">
 <h5 style="margin-left: 70px">Accountants</h5>
 </div>
@@ -302,7 +283,7 @@ function showSlides() {
   <div class="overlay">
   </div>
 
-  <ol class="carousel-indicators">
+  <ol class="carousel-indicators col-lg-12">
     <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#bs-carousel" data-slide-to="1"></li>
     <li data-target="#bs-carousel" data-slide-to="2"></li>
@@ -332,6 +313,28 @@ function showSlides() {
   </div>
 </div>
 </div>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.querySelectorAll('.slide');
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
     <!-- checked -->
 <footer>
     <div class="footer" id="footer">
