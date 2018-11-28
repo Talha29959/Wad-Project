@@ -1,13 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Body</title>
+    <title>Login In</title>
+    <link rel="stylesheet" href="style1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style2.css">
- <!--  <link rel="stylesheet" href="style1.css">-->
 </head>
-<body>
+<body class="ra_body">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" style="margin: 0">
     <div class="container-fluid">
@@ -24,170 +24,60 @@
         </ul>
     </div>
 </nav>
+<div class="ra-1">
 
-
-
-
-<div id="header" >
-    <a href="index.html">
-    <i style="font-size:28px" class="fa">&#xf060; Sign Up</i>
-    </a>
-</div>
-
-
-<div class="container" id="d1">
+    <h2 class="ra_h2">Sign Up</h2>
     <form>
-        <font>1. Email address you check most often</font>
-        <div class="group" >
-            <input  type="text" placeholder="Emails" required>
+        <div>1. Email address you check most often.
+        <input type="text" class="ra-2"placeholder="Email"required><br>
         </div>
-        <font>2. Please tell us your name.</font>
-        <div class="group">
-            <input type="text" placeholder="First Name" required>
-            <br>
-            <input type="text" placeholder="Last Name" required>
+
+        <div>2. Please tell us your name.
+        <input type="text"  class="ra-2"placeholder="FirstName"required>
+        <input type="text"  class="ra-2"placeholder="LastName"required>
         </div>
-        <font>3.When were you born ?</font>
-        <div class="grid_container">
-            <div>
-                <input id="day" type="text" placeholder="Day" required>
-            </div>
-            <div>
-                <input id="mon" type="text" placeholder="Month" required>
-            </div>
-            <div>
-                <input id="yr" type="text" placeholder="Year" required>
-            </div>
+
+        <div>3. When were you born
+            <table>
+                <tr>
+                    <td><input type="number"  class="ra-2" placeholder="Day"required></td>
+                    <td><input type="number"  class="ra-2" placeholder="Month"required></td>
+                    <td><input type="number"  class="ra-2" placeholder="Year"required></td>
+                </tr></table>
         </div>
-        <font>4.Are you male or female ?</font>
-        <div class="group">
-            <input type="text" placeholder="Select Gender" required>
+
+        <div>4. Are you male or female
+            <select class="ra-2">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+          <!--  <input type="text"  class="ra-2 " placeholder="select gender"required>-->
         </div>
-        <font>5.Your Nationality</font>
-        <div class="group">
-            <input type="text" value="Pakistani" required>
+
+        <div>5. Your Nationality.
+            <input type="text"  class="ra-2 " placeholder="Pakistani"required>
         </div>
-        <font>6.What about your phone number ?</font>
-        <div class="grid_container">
-            <div>
-                <input id="c_code" type="text" value="+92" required>
-            </div>
-            <div>
-                <input id="code" type="text" placeholder="Code" required>
-            </div>
-            <div>
-                <input id="pnum" type="text" placeholder="" required>
-            </div>
+
+        <div>6. How about your mobile phone number?
+            <table>
+                <tr>
+                    <td><input type="number"  class="ra-2" placeholder="+92" min="0" required></td>
+                    <td><input type="number"  class="ra-2" placeholder="code" min="0" required></td>
+                    <td><input type="number"  class="ra-2" placeholder="" min="0" required></td>
+                </tr></table>
         </div>
-        <font>7.Now,set a password for your account.</font>
-        <div class="group">
-            <input type="password" placeholder="Password" required>
+
+        <div>7. Upload your most recent resume/ cv (optional)
+            <input type="submit" class="ra-3" value="select a file">
+            <input type="text" class="ra-2" placeholder="maximum size of 3.0 mb for a file.">
+            <input type="text" class="ra-2" placeholder="Allowed types:pdf,docx,doc.">
         </div>
-        <br>
-        <div id="continue">
-        <input  type="submit" class="btn btn-primary" value="Continue">
+
+        <div>
+        <input type="submit" class="ra-3 ra-input" value="Continue">
+
         </div>
     </form>
 </div>
-
-
-
-
-
-
-<footer>
-    <div class="footer" id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3  col-md-2 col-sm-5 col-xs-6">
-                    <h3> Jobs by Functional Area </h3>
-                    <ul>
-                        <li> <a href="sales.html"> Sales  </a> </li>
-                        <li> <a href="accounts.html"> Accounts </a> </li>
-                        <li> <a href="admin.php"> Administration </a> </li>
-                        <li> <a href="software.html"> Software & Web </a> </li>
-                        <li> <a href="telemarket.php"> Telemarketing </a> </li>
-                        <li> <a href="enginer.php"> Engineering </a> </li>
-                        <li> <a href="market.php"> Marketing </a> </li>
-                        <li> <a href="health.php"> Health & Medicine </a> </li>
-                        <li> <a href="teach.php"> Teaching </a> </li>
-                    </ul>
-                </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-8">
-                    <h3> Jobs by Company </h3>
-                    <ul>
-                        <li> <a href="jazz.php"> Jazz  </a> </li>
-                        <li> <a href="temp.html"> Contour Software </a> </li>
-                        <li> <a href="temp.html"> Roots International School </a> </li>
-                        <li> <a href="temp.html"> United Nations Pakistan </a> </li>
-                        <li> <a href="temp.html"> Crossover Market Inc </a> </li>
-                        <li> <a href="bankalhabib.php"> Bank Al Habib </a> </li>
-                        <li> <a href="packageslimited.php"> Packages Limited </a> </li>
-                        <li> <a href="temp.html"> Creative Chaos </a> </li>
-                        <li> <a href="pakistanreadingproject.php"> Pakistan Reading Project </a> </li>
-                    </ul>
-                </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-8">
-                    <h3> Jobs by City </h3>
-                    <ul>
-                        <li> <a href="lahore.php"> Lahore  </a> </li>
-                        <li> <a href="faisalabad.php"> Faislabad </a> </li>
-                        <li> <a href="chinniot.php"> Chinniot </a> </li>
-                        <li> <a href="temp.html"> Abbottabad </a> </li>
-                        <li> <a href="temp.html"> D.I. Khan </a> </li>
-                        <li> <a href="gujranwala.php"> Gujranwala </a> </li>
-                        <li> <a href="islamabad.php"> Islamabad </a> </li>
-                        <li> <a href="temp.html"> Bahawalpur </a> </li>
-                        <li> <a href="temp.html"> D.G Khan </a> </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3  col-md-2 col-sm-4 col-xs-8">
-                    <h3> Jobs by Industry </h3>
-                    <ul>
-                        <li> <a href="it.php"> Information Technology  </a> </li>
-                        <li> <a href="manufacturing.php"> Manufacturing </a> </li>
-                        <li> <a href="tele.php"> Telecommunication </a> </li>
-                        <li> <a href="temp.html"> Banking/Financial Services </a> </li>
-                        <li> <a href="temp.html"> Textile/Garments </a> </li>
-                        <li> <a href="property.php"> Real Estate/Property </a> </li>
-                        <li> <a href="callcenter.php">  Call Center</a> </li>
-                        <li> <a href="temp.html"> education/Training Center </a> </li>
-                        <li> <a href="temp.html"> Services </a> </li>
-                    </ul>
-                </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-8 ">
-
-                    <h3>Job Seekers</h3>
-                    <ul>
-                        <li><a href="signup.html">CV Writing</a></li>
-                        <li><a href="">Free CV Review</a></li>
-                        <li><a href="adminlogin.php">ADMIN LOGIN</a></li>
-                    </ul>
-                    <h3>  Employers</h3>
-                    <ul>
-
-                        <li><a href="signup.html">Create Account</a></li>
-                        <li><a href="postjob.html">Post a Job</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <div class="container">
-            <p class="pull-left">Copyright ©2018 RozeeRoti - Jobs in Pakistan - All Rights Reserved - A Division of Talha Networks, Inc.  </p>
-            <div class="pull-right">
-                <ul class="nav nav-pills payments">
-                    <li><i class="fab fa-cc-visa"></i></li>
-                    <li><i class="fab fa-cc-mastercard"></i></li>
-                    <li><i class="fab fa-cc-amex"></i></li>
-                    <li><i class="fab fa-cc-paypal"></i></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
-
 </body>
 </html>

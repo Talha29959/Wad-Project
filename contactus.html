@@ -1,73 +1,58 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Contact Us</title>
-    <link rel="stylesheet" href="style3.css">
     <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <meta name="author" content="Hege Refsnes">
-    <meta name="description" content="Glyphicon support for Twitter's Bootstrap">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-<div>
-<h1 id="contact">Contact Us</h1>
-<form>
-    <div class="col-5">
-        <label for="name"><b>Name:</b></label>
-        <input type="text" class="form-control" id="name">
-    </div>
-    <div class="col-5">
-        <label for="email"><b>Email:</b></label>
-        <input type="text" class="form-control" id="email">
-    </div>
-    <div>
-    <b>Phone:</b>
-    <div class="form-group row">
-        <div class="col-1 ">
-            <select class="form-control" id="c_code" >
-                <option>+91</option>
-                <option>+44</option>
-                <option selected>+92</option>
-                <option>+76</option>
-            </select>
-        </div>
-        <div class="col-1">
-            <select class="form-control" id="m_code" >
-                <option selected>Code</option>
-                <option>301</option>
-                <option>321</option>
-                <option>343</option>
-            </select>
-        </div>
-        <div class="col-3">
-            <input type="text" class="form-control">
-        </div>
-    </div>
-    <div class="col-5">
-        <label for="started"><b>What are your concering issues ?</b></label>
-        <input type="text" class="form-control" id="started" placeholder="Get Started">
-    </div>
-    <br>
-    <div class="form-group">
-        <textarea class="form-control" rows="5" placeholder="Please enter your message" id="comment"></textarea>
-    </div>
 
-    <input type="submit" class="btn btn-primary" value="Submit">
-</form>
+<body class="ra_body">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="margin: 0">
+    <div class="container-fluid">
+        <div class="navbar-header col-">
+            <b><a class="navbar-brand" href="index.html">RozeeRoti.pk</a></b>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active col-"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li class="col-"><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
+            <li class="col-"><a href="postjob.html">Post a Job</a></li>
+            <li class="col-"><a href="contactus.html"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
+            <li class="col-"><a href="login.html"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
+            <li class="col-"><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="ra-1">
+
+    <h2 class="ra_h2">Contact Us</h2>
+    <form>
+        <div>1.Name
+            <input type="text" class="ra-2" placeholder=""required>
+        </div>
+
+        <div>2.Enter Address
+            <input type="text" class="ra-2" placeholder=""required>
+        </div>
+
+        <div>3.Phone No.
+            <table>
+                <tr>
+                    <td><input type="number"  class="ra-2" placeholder="+92" min="0" required></td>
+                    <td><input type="number"  class="ra-2" placeholder="code" min="300" required></td>
+                    <td><input type="number"  class="ra-2" placeholder="" min="0" required></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <textarea class="ra-2" rows="4" cols="50" placeholder="Comment"></textarea>
+        </div>
+        <div>
+            <input type="submit" class="ra-3 ra-input" value="Submit"required>
+        </div>
+    </form>
 </div>
-
 </body>
 </html>
