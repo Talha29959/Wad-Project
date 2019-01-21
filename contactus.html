@@ -1,14 +1,40 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style1.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+  <title>Contact Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style1.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <script>
+  function checkEmail(){
+	var reM = /^\w+([\._]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	var emm = document.getElementById('e').value;
+	if(!reM.test(emm)){
+		document.getElementById('eres').innerHTML = "Inavlid Mail";
+	}
+	else{
+		document.getElementById('eres').innerHTML = "Valid Mail";
+	}
+	}
+  function checknumber(){
+	var reC = /^\d{7}$/;
+	var cel = document.getElementById('n2').value;
+	if(!reC.test(cel)){
+		document.getElementById('cres').innerHTML = "Inavlid Cell No";
+	}
+	else{
+		document.getElementById('cres').innerHTML = "Valid Cell no";
+	}
+	}
+  </script>
+  <style>
+</style>
+  </head>
+  
+<body class="sa_body">
 
-<body class="ra_body">
 <nav class="navbar navbar-inverse navbar-fixed-top" style="margin: 0">
     <div class="container-fluid">
         <div class="navbar-header col-">
@@ -19,41 +45,133 @@
             <li class="active col-"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
             <li class="col-"><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
             <li class="col-"><a href="postjob.html">Post a Job</a></li>
-            <li class="col-"><a href="contactus.html"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
-            <li class="col-"><a href="login.html"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
+            <li class="col-"><a href="contactus.html"><span class="glyphicon glyphicon-info-sign"></span>Contact US</a></li>
+            <li class="col-"><a href="login.php"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
             <li class="col-"><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
         </ul>
     </div>
 </nav>
-<div class="ra-1">
-
-    <h2 class="ra_h2">Contact Us</h2>
-    <form>
-        <div>1.Name
-            <input type="text" class="ra-2" placeholder=""required>
-        </div>
-
-        <div>2.Enter Address
-            <input type="text" class="ra-2" placeholder=""required>
-        </div>
-
-        <div>3.Phone No.
-            <table>
-                <tr>
-                    <td><input type="number"  class="ra-2" placeholder="+92" min="0" required></td>
-                    <td><input type="number"  class="ra-2" placeholder="code" min="300" required></td>
-                    <td><input type="number"  class="ra-2" placeholder="" min="0" required></td>
-                </tr>
-            </table>
-        </div>
-
-        <div>
-            <textarea class="ra-2" rows="4" cols="50" placeholder="Comment"></textarea>
-        </div>
-        <div>
-            <input type="submit" class="ra-3 ra-input" value="Submit"required>
-        </div>
-    </form>
+<div class="container " >
+<div class="row"  >
+<div class="col-md-4">
 </div>
-</body>
-</html>
+<div class="col-md-4">
+</div>
+</div>
+<br><br><br>
+<div class="ibt-1">
+<label >Name*</label>
+
+	<input type="text" id="name" class="ibt-2" placeholder="name" required>
+	<br>
+	<label  >Email Adress*</label>
+
+	<input type="text" id ="e" placeholder="email" class="ibt-2" onblur="checkEmail()" required>
+	<p id="eres" style="margin-left:300"></p>
+	<label>Phon No.*</label>
+	<br>
+	<select id="ac"
+          name="areacode" placeholder="phone number" class="ibt-2"/>
+	<option value="+92">+92</option>      
+
+    <option value="+91">+91</option>      
+    <option value="+93">+93</option> 
+	<option value="+94">+94</option>      
+    <option value="+95">+95</option> 
+    </select>
+
+<select id="nc"
+          name="numbercode" class="ibt-2 "/>
+	<option>Code</option>      
+
+    <option value="301">301</option>      
+    <option value="302">302</option>      
+    <option value="310">310</option> 
+	<option value="312">312</option>      
+    <option value="333">333 </option> 
+    </select>
+	<input type="text" class="ibt-2" id="n2" onblur="checknumber()" >
+	<p id="cres"></p>
+	<label>What are your concerning Issues*</label>
+	
+	<select id="cw"
+          name="salary" class="ibt-2"/>
+	<option>Get Started</option>      
+
+    <option value="employers">Employers</option> 
+	<option value="professionals">Professional</option>      
+    <option value="useraccounts">User Account</option> 
+	<option value="jobsearchapps">Job search App</option>      
+    <option value="emplyerapp">Employer app</option>  
+    </select>
+		<br><br>
+	<textarea  id="jd" placeholder="Please Enter Your Message*" style="margin-top:00;text:top;width:280; height:250;background-color:grey;
+color:black;font-size:18px""></textarea></div>
+	
+	<input type="submit" value="Submit" class="ibt-3"id="submit" onclick="enter()">
+	</fieldset>  
+	
+	</div >
+
+  </body>
+  
+  
+  
+  
+  
+  
+  <script>
+  	function enter(){
+
+  		var nam1 = $("#name").val();
+  		var email =  $("#e").val();
+  		var code =  $("#nc").val();
+  		var num =  $("#ac").val();
+  		var num1 =  $("#n2").val();
+  		var res =(num).concat(code);
+  		var fres = (res).concat(num1);
+  		var cate =  $("#cw").val();
+  		var msg = $("#jd").val();
+  		//alert(nam1);
+  		//alert(code);
+  		da = {
+  			"name1":nam1,
+  			"mail":email,
+  			"number":fres,
+  			"categor":cate,
+  			"mag":msg
+
+  				}
+  				$.ajax({
+				type:"POST",
+				url:"contact.php",
+				data:da,
+				dataType:'html'
+			}).done(function(data,status){
+				$("#msg").html(data);
+
+			});
+  	/*	<?php 
+  			$img = addslashes($_FILES['img']['tmp_name']);
+  			$nae = addslashes($_FILES['img']['nae']);
+  			$img = file_get_contents($img);
+  			$img = base64_encode($img);
+  			$con = mysqli_connect("localhost","root","","rozeeroti");
+  			$q = "insert into contactus values ('nam1','email','code','fres','cate','msg','$img')";
+  			$re = mysqli_query($con,$q);
+  			if($re){
+			echo "Account Created Successfully!!!!";
+		}
+		else{
+			echo "Invalid Account!!!";
+			}
+  		?>*/
+  		//var img = addslashes($_FILES['fi']['tmp_name']);
+  				
+
+
+  	}
+
+
+  </script>
+  </html>

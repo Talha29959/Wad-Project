@@ -1,15 +1,73 @@
-<!DOCTYPE html>
-<html>
+﻿<html>
 <head>
-    <title>Post A Job</title>
+  <title>Post a job</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style1.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <script src="postajob.js"></script>
 
+<<<<<<< Updated upstream
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style1.css">
 </head>
 <body class="sa_body">
+=======
+  <script>
+  function disableSubmit() {
+  document.getElementById("submit").disabled = true;
+ }
 
+  function activateButton(element) {
+
+      if(element.checked) {
+        document.getElementById("submit").disabled = false;
+       }
+       else  {
+        document.getElementById("submit").disabled = true;
+      }
+>>>>>>> Stashed changes
+
+  }
+  function checknumber(){
+	var reC = /^\d{7}$/;
+	var cel = document.getElementById('n2').value;
+	if(!reC.test(cel)){
+		document.getElementById('cres').innerHTML = "Inavlid Cell No";
+	}
+	else{
+		document.getElementById('cres').innerHTML = "Valid Cell no";
+	}
+}
+function checkcnic(){
+	var reC = /^\d{13}$/;
+	var cel = document.getElementById('n3').value;
+	if(!reC.test(cel)){
+		document.getElementById('ccres').innerHTML = "Inavlid CNIC No";
+	}
+	else{
+		document.getElementById('ccres').innerHTML = "Valid CNIC no";
+	}
+}
+  function checkEmail(){
+	var reM = /^\w+([\._]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	var emm = document.getElementById('e').value;
+	if(!reM.test(emm)){
+		document.getElementById('eres').innerHTML = "Inavlid Mail";
+	}
+	else{
+		document.getElementById('eres').innerHTML = "Valid Mail";
+	}
+	}
+  
+  </script>
+
+</head>
+<body onload="disableSubmit()">
 <nav class="navbar navbar-inverse navbar-fixed-top" style="margin: 0">
     <div class="container-fluid">
         <div class="navbar-header col-">
@@ -20,24 +78,306 @@
             <li class="col-"><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
             <li class="col-"><a href="postjob.html">Post a Job</a></li>
             <li class="col-"><a href="contactus.html"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
-            <li class="col-"><a href="login.html"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
+            <li class="col-"><a href="login.php"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
             <li class="col-"><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
         </ul>
     </div>
 </nav>
-<div class="ibt-1">
+<fieldset id="a1">
+<div>
 
-    <h2>Post The Job</h2>
-    <form>
-        <input type="text" class="ibt-2" placeholder="Job Title:"required><br>
-        <input type="text"  class="ibt-2" placeholder=" Job Description:"required>
-        <input type="text"  class="ibt-2" placeholder="Skills Required:"required>
-        <input type="text"  class="ibt-2" placeholder="Minimum Qualification:"required>
-        <input type="text"  class="ibt-2" placeholder="Minimum Experience:"required>
-        <input type="text"  class="ibt-2" placeholder="Expected Salary:"required>
-        <input type="text"  class="ibt-2" placeholder="Office Location:"required>
-        <input type="submit" class="ibt-3" value="Submit">
-    </form>
+<div class="ibt-1">
+<h1 > Post your first job in minutes! </h1><br>
+<label>Job Title*</label>
+<br><br>
+<input type="text" class="ibt-2" id="jotit">
+<br>
+<label>Job Description*</label>
+<br><textarea   style="margin-top:00;text:top;width:280; height:250;background-color:grey;
+color:black;font-size:18px" id="desc"></textarea>
+<label>What skills are required for this job?</label>
+<input type="text"  placeholder="Example PHP,HTML.CSS" class="ibt-2" id="skl">
+<label>Required career level for this job?</label>
+<label>No.of Position*</label>
+<br>
+<select id="leve" class="ibt-2"/>
+	<option >Select career lavel</option>      
+
+    <option value="student">Intern/Student</option> 
+	<option value="entrylevel">Entry Level</option>      
+    <option value="professional">Experience Professional</option> 
+	<option value="head">Department Head</option>      
+    <option value="ceo">GM/CEO/Country Head/President</option> 
+    </select>
+	<select id="cl1" class="ibt-2"/>
+	<option value="1">1</option>      
+
+    <option value="2">2</option> 
+	<option value="3">3</option>      
+    <option value="4">4</option> 
+	<option value="5">5</option>      
+    <option value="6">6</option>
+	<option value="7">7</option>      
+
+    <option value="8">8</option> 
+	<option value="9">9</option>      
+    <option value="10">10</option> 
+	<option value="11">11</option>      
+    <option value="12">12</option>	
+    </select>
+    <br>
+
+	<label>Job Location*</label>
+	<br>
+	<select id="cw" class="ibt-2"
+          name="salary"/>
+	<option>Select City</option>      
+
+    <option value="karachi">Karachi</option> 
+	<option value="islamabad">Islamabad</option>      
+    <option value="lahore">Lahore</option> 
+	<option value="quetta">Quetta</option>      
+    <option value="peshawar">Peshawar</option> 
+	<option value="multan">Multan</option>      
+    <option value="faislabad">Faisalabad</option> 
+	<option value="sargodha">Sargodha</option>      
+    <option value="sahiwal">Sahiwal</option>   
+    <option value="lodhara">Lodharan </option>
+    </select>	
+	<label>What minimum qualification is required?*</label>
+	<br>
+<select id="study" class="ibt-2" />
+	<option>Select Degree Level</option>      
+
+    <option value="nomatric">Non-Matriculation</option> 
+	<option value="matric">Mariculation/O-Level</option>      
+    <option value="inter">InterMediate/A-Level </option> 
+	<option value="bachelor">Bacholer</option>      
+    <option value="master">Master</option> 
+	<option value="ms">MPhil/MS</option> 
+    <option value="phd">Phd</option> 
+    <option value="diploma">Diploma</option> 
+
+    </select>
+	<select id="rank" class="ibt-2"/>
+	<option value="high">or Higher</option>      
+
+    <option value="exactly">Exactly</option> 
+	
+    </select>
+	
+	<label>Years of experience required? *</label>
+	<br>
+	<select id="exp"class="ibt-2"/>
+		<option value="min">Min</option>      
+
+	<option value="fresh">Fresh</option>      
+
+	<option value="1">1 Years</option>      
+
+    <option value="2">2 Years</option> 
+	<option value="3">3 Years</option>      
+    <option value="4">4 Years</option> 
+	<option value="5">5 Years</option>      
+    <option value="6">6 Years</option>
+	<option value="7">7+ Years</option>      
+  
+    </select>
+	<select id="maxexp" class="ibt-2"/>
+	<option value="max">Max</option>      
+	
+	
+	<option value="fresh">Fresh</option>      
+
+	<option value="1">1 Years</option>      
+
+    <option value="2">2 Years</option> 
+	<option value="3">3 Years</option>      
+    <option value="4">4 Years</option> 
+	<option value="5">5 Years</option>      
+    <option value="6">6 Years</option>
+	<option value="7">7+ Years</option>   
+
+    </select>
+	<label>What is the salary range? *</label>
+	<br>
+<select id="pk"
+          name="salary" class="ibt-2"/>
+	<option>Select salary</option>      
+
+    <option value="5,000-6,999">5,000-6,999</option> 
+	<option value="7,000-8,999">7,000-8,999</option>      
+    <option value="9.000-19,999">9.000-19,999</option> 
+	<option value="20,000-20,999">20,000-20,999</option>      
+    <option value="21,000-22,999">21,000-22,999</option> 
+	<option value="23,000-24,999">23,000-24,999</option>      
+    <option value="25,000-100000+ "> 25,000-100000+ </option> 
+    </select>
+	<br><br>
+				<label>Is there a gender preference for this job?</label>
+		<br><br>
+		<select id="gender"
+          name="gender_start" class="ibt-2"/>
+	<option value="nopreference">No Preference</option>      
+
+    <option value="male">Male</option>      
+    <option value="female">Female</option> 
+    </select>
+	<br><br>	
+	<input type="checkbox" name="terms" id="terms" 
+	onchange="activateButton(this)">  I authorize ROZEEROTI.PK to post jobs of my company on its website.
+    <br><br>
+	<input type="submit" value="Continue" id="mi" class="ibt-3">	
+	</fieldset>
+	
+	<fieldset id="a2" hidden>
+	<div class="ibt-1" >
+	<h2 >  You're minutes away from hiring the best!  </h2>
+	<br>
+	<label>Can you tell us your full name?*</label>
+
+	<input type="text" class="ibt-2" id="name">
+	<br>
+	<label>Email address you check most often?*</label>
+
+	<input type="text"  id="e" class="ibt-2 onblur="checkEmail()">
+	<p id="eres"></p>
+	<label>What company or organization are you with?*</label>
+	<input type="text"  id="com1" class="ibt-2">
+	<br>
+	<label>Now, set a password for your account.*</label>
+	<input type="password" class="ibt-2   id="pwd">
+	<label>Best number to reach you at?*</label>
+	<br>
+	<select id="ac"
+          name="areacode" " class="ibt-2"/>
+	<option value="+92" >+92</option>      
+
+    <option value="+91">+91</option>      
+    <option value="+93">+93</option> 
+	<option value="+94">+94</option>      
+    <option value="+95">+95</option> 
+    </select>
+
+<select id="nc"
+          name="numbercode" class="ibt-2"/>
+	<option>Code</option>      
+
+    <option value="301">301</option>      
+    <option value="302">302</option>      
+    <option value="310">310</option> 
+	<option value="312">312</option>      
+    <option value="333">333 </option> 
+    </select>
+	<input type="text" id="n2" class="ibt-2" "onblur="checknumber()" >
+	<p id="cres"></p>
+	<label>City</label>
+
+	<select id="city"
+          name="salary" class="ibt-2"/>
+	<option>Select City</option>      
+
+    <option value="karachi">Karachi</option> 
+	<option value="islamabad">Islamabad</option>      
+    <option value="lahore">Lahore</option> 
+	<option value="quetta">Quetta</option>      
+    <option value="peshawar">Peshawar</option> 
+	<option value="multan">Multan</option>      
+    <option value="faislabad">Faisalabad</option> 
+	<option value="sargodha">Sargodha</option>      
+    <option value="sahiwal">Sahiwal</option>   
+    <option value="lodhara">Lodharan </option>
+    </select>	
+	
+	<label > Your CNIC number </label>
+	<input type="text" id="n3"class="ibt-2" placeholder="Enter CNIC W/O dashes"onblur="checkcnic()">
+	<p id="ccres"></p>
+	<br>
+	<a href="index.php"><input type="submit" value="Submit" id="submit" class="ibt-2" onclick="postjob()"></a>
+	</fieldset><br>
+	</div>
+	<p style="font:15px;color:white">Looking for assistance? Call: ‎0305-7456545 (ROZEEROTI)‎<p>
 </div>
 </body>
+<script>
+	function postjob(){
+			var jobtitle = $("#jotit").val();
+			var jobdes = document.getElementById('desc').value;
+			var skil = document.getElementById('skl').value;
+			var mail = $("#e").val();
+			var acpswd = $("#pwd").val();
+			//var org = $("#e1").val();
+			var name1 = $("#name").val();
+			var comp = $("#com1").val();
+			var nic =  $("#n3").val();
+
+
+
+   			  var x1 =  $("#leve").val();
+
+   			     			  var y1 =  $("#cl1").val();
+   			  
+   			  var z1 =  $("#cw").val();
+   			   
+   			  var u1 =  $("#study").val();
+   			  
+   			  var v1 =  $("#rank").val();
+   			  
+   			  var w1 =  $("#exp").val();
+   			   
+   			  var p1 =  $("#maxexp").val();
+   			
+   			  var g1 =  $("#gender").val();
+   			 // alert(g1);//careerlevel
+   			  
+   			  var rupees1 =  $("#pk").val();
+   			  //alert(rupees1);
+   			  
+   			  var ct1 =  $("#city").val();
+   			  //alert(ct1);
+   			  var m1 =  $("#ac").val();
+   			  
+   			  var m2 =  $("#nc").val();
+   			  
+   			  var m5 =   document.getElementById('n2').value;
+   			//  var m6 = document.getElementsByTagName("option")[m5].value;
+   			  var res = m1.concat(m2);
+   			  var fres = res.concat(m5);
+   		
+  			da = {
+				"titl":jobtitle,
+				"des":jobdes,
+				"skils":skil,
+				"emails":mail,
+				"pswd":acpswd,
+				"organiz":comp,
+				"name2":name1,
+				"cnic":nic,
+				"resmobile":fres,
+				"salary":rupees1,
+				"gender":g1,
+				"location":z1,
+				"stud":u1,
+				"rnk":v1,
+				"mexp":w1,
+				"xexp":p1,
+				"cty":ct1,
+				"lvl":x1,
+				"cval":y1,
+				"jl":z1,
+
+			}
+			$.ajax({
+				type:"POST",
+				url:"job.php",
+				data:da,
+				dataType:'html'
+			}).done(function(data,status){
+				$("#msg").html(data);
+
+			});
+
+
+	}
+</script>
 </html>

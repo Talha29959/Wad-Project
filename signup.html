@@ -1,83 +1,517 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Login In</title>
-    <link rel="stylesheet" href="style1.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>SignUp for job</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style1.css">
+  <script src="signupfile.js"></script>
+  
+  <script>
+  function checkEmail(){
+	var reM = /^\w+([\._]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	var emm = document.getElementById('e').value;
+	if(!reM.test(emm)){
+		document.getElementById('eres').innerHTML = "Inavlid Mail";
+	}
+	else{
+		document.getElementById('eres').innerHTML = "Valid Mail";
+	}
+	}
+	function checkName(){
+	var reN = /^[A-Za-z]{1,25}$/;
+	var fname = document.getElementById('fn').value;
+	var lname = document.getElementById('ln').value;
+
+	if(!reN.test(fname) || !reN.test(fname) ){
+		document.getElementById('fres').innerHTML = "Inavlid name";
+	}
+	else{
+		document.getElementById('fres').innerHTML = "Valid Name";
+	}
+}
+function checknumber(){
+	var reC = /^\d{7}$/;
+	var cel = document.getElementById('n2').value;
+	if(!reC.test(cel)){
+		document.getElementById('cres').innerHTML = "Inavlid Cell No";
+	}
+	else{
+		document.getElementById('cres').innerHTML = "Valid Cell no";
+	}
+}
+
+</script>
+
 </head>
-<body class="ra_body">
+<body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" style="margin: 0">
-    <div class="container-fluid">
-        <div class="navbar-header col-">
-            <b><a class="navbar-brand" href="index.html">RozeeRoti.pk</a></b>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="active col-"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li class="col-"><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
-            <li class="col-"><a href="postjob.html">Post a Job</a></li>
-            <li class="col-"><a href="contactus.html"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
-            <li class="col-"><a href="login.html"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
-            <li class="col-"><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
-        </ul>
-    </div>
-</nav>
-<div class="ra-1">
+<div class="ibt-1">
+<fieldset id="s1"><h1>Signup</h1>
+<label>
+<h2>1. Email Address you check most often.</h2><br>
+<input type="Email" placeholder="Email" id="e"  class="ibt-2"onblur="checkEmail()" ><br>
+<p id="eres"></p>
+<br><input type="button" value="NEXT" class="ibt-3" id="ns2" ></p>
+</label>
+</fieldset>
+<fieldset id="s2" hidden>
+<label >
+<h2>2. Please tell us your name.</h2><br><br><br>
+<input type="text" placeholder="First Name" id="fn" class="ibt-2" onblur="checkName() " >
+<input type="text" placeholder="Last Name" id="ln" class="ibt-2"  onblur="checkName()" > <p id="fres"></p>
+<br><br>
+<input type="button" value="Back" id="ps1" class="ibt-3">
+<input type="button" value="NEXT" id="ns3" class="ibt-3">
+</label>
+</fieldset>
+<fieldset id="s3" hidden>
+<label style="margin:00" >
+<h2 >3. When were you born.</h2><br>
 
-    <h2 class="ra_h2">Sign Up</h2>
-    <form>
-        <div>1. Email address you check most often.
-        <input type="text" class="ra-2"placeholder="Email"required><br>
-        </div>
+ 
+  <select id="month_start"
+          name="month_start" class="ibt-2"/>
+	<option>Month</option>       
 
-        <div>2. Please tell us your name.
-        <input type="text"  class="ra-2"placeholder="FirstName"required>
-        <input type="text"  class="ra-2"placeholder="LastName"required>
-        </div>
+    <option value="01">January</option>      
+    <option value= "02">February</option>      
+    <option value="03">March</option>      
+    <option value="04">April</option>      
+    <option value="05">May</option>      
+    <option value="06">June</option>      
+    <option value="07">July</option>      
+    <option value="08">August</option>      
+    <option value="09">September</option>      
+    <option value="10">October</option>      
+    <option value="11">November</option>      
+    <option value="12">December</option>      
+  </select> 
+  <select id="day_start"
+          name="day_start" class="ibt-2" />
+	<option>Day</option>      
+   <option value="01">1</option>      
 
-        <div>3. When were you born
-            <table>
-                <tr>
-                    <td><input type="number"  class="ra-2" placeholder="Day"required></td>
-                    <td><input type="number"  class="ra-2" placeholder="Month"required></td>
-                    <td><input type="number"  class="ra-2" placeholder="Year"required></td>
-                </tr></table>
-        </div>
+    <option value="02">2</option> 
+	<option value="03">3</option>      
+    <option value="04">4</option> 
+	<option value="05">5</option>      
+    <option value="06">6</option>
+	<option value="07">7</option>      
 
-        <div>4. Are you male or female
-            <select class="ra-2">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-            </select>
-          <!--  <input type="text"  class="ra-2 " placeholder="select gender"required>-->
-        </div>
+    <option value="08">8</option> 
+	<option value="09">9</option>      
+    <option value="10">10</option> 
+	<option value="11">11</option>      
+    <option value="12">12</option>	      
+  </select>
+  <select id="year_start"
+         name="year_start"  class="ibt-2"/>
+	    <option>Year</option>      
+    <option value="2009">2009</option>      
+    <option value="2010">2010</option>      
+    <option value="2011">2011</option>      
+    <option value="2012">2012</option>      
+    <option value="2013">2013</option>      
+    <option value="2014">2014</option>      
+    <option value="2015">2015</option>      
+    <option value="2016">2016</option>      
+    <option value="2017">2017</option>      
+    <option value="2018">2018</option>      
+  </select>
 
-        <div>5. Your Nationality.
-            <input type="text"  class="ra-2 " placeholder="Pakistani"required>
-        </div>
+<br><br>
+<input type="button" value="Back" id="ps2" class="ibt-2">
+<input type="button" value="NEXT" id="ns4" class="ibt-2">
+  </label>
+</fieldset>
 
-        <div>6. How about your mobile phone number?
-            <table>
-                <tr>
-                    <td><input type="number"  class="ra-2" placeholder="+92" min="0" required></td>
-                    <td><input type="number"  class="ra-2" placeholder="code" min="0" required></td>
-                    <td><input type="number"  class="ra-2" placeholder="" min="0" required></td>
-                </tr></table>
-        </div>
+<fieldset id="s4" hidden>
+<label style="margin:00" >
+<h2>4. Are you male or female ?</h2><br>
+ <select id="gender"
+          name="gender_start" class="ibt-2"/>
+	<option>Select Gender</option>      
 
-        <div>7. Upload your most recent resume/ cv (optional)
-            <input type="submit" class="ra-3" value="select a file">
-            <input type="text" class="ra-2" placeholder="maximum size of 3.0 mb for a file.">
-            <input type="text" class="ra-2" placeholder="Allowed types:pdf,docx,doc.">
-        </div>
+    <option value="male">Male</option>      
+    <option value="female">Female</option> 
+    </select>	
+	<br><br>
+	<input type="button" value="Back" id="ps3" class="ibt-3" 
+style="background-color:darkred ;color:white;margin-right:50;
+width:130;height:50;font-size:20">
+	<input type="button" value="NEXT" id="ns5" class="ibt-3"></p>
+</label>
+</fieldset>
 
-        <div>
-        <input type="submit" class="ra-3 ra-input" value="Continue">
+<fieldset id="s5" hidden>
+<label style="margin:00" >
+<h2>5.Your Nationality</h2><br>
+ <select id="n"
+          name="n" class="ibt-2"/>
+	<option value="pak">Pakistani</option>      
 
-        </div>
-    </form>
+    <option value="ksa">KSA</option>      
+    <option value="usa">USA</option> 
+	<option value="uk">UK</option>      
+    <option value="india">India</option> 
+	
+	<option value="bangladesh">BanglaDesh</option>      
+    <option value="china">China</option> 
+    </select>	
+	<br><br>
+	<input type="button" value="Back" class="ibt-3" id="ps4">
+	<input type="button" value="NEXT" id="ns6" class="ibt-3"></p>
+</label>
+</fieldset>
+
+<fieldset id="s6" hidden>
+<label style="margin:00" >
+<h2>6.How about your Mobile Phon Number</h2><br>
+ <select id="ac"
+          name="areacode" class="ibt-2"/>
+	<option value="+92">+92</option>      
+
+    <option value="+91">+91</option>      
+    <option value="+93">+93</option> 
+	<option value="+94">+94</option>      
+    <option value="+95">+95</option>
+    </select>
+
+<select id="nc"
+          name="numbercode" class="ibt-2"/>
+	<option>Code</option>      
+
+    
+    <option value="301">301</option>      
+    <option value="302">302</option>      
+    <option value="310">310</option> 
+	<option value="312">312</option>      
+    <option value="333">333 </option> 
+	</select>
+	<input type="text" id="n2" style="onblur=checknumber()" class="ibt-2" >
+	<p id="cres"></p>
+	<br>
+	<input type="button" value="Back" id="ps5" class="ibt-3">
+	<input type="button" value="NEXT" id="ns7" class="ibt-3"></p>
+</label>
+</fieldset>
+
+<fieldset id="s7" hidden><label>
+<h2>7. Now,Set a Passcode for your account</h2><br>
+<input type="password"  id="p" class="ibt-2"><br><br>
+<input type="button" value="Back" id="ps6" class="ibt-3"; 
+width:130;height:50;font-size:20">
+<input type="button" value="NEXT" id="ns8"  class="ibt-3">
+</label>
+</fieldset>
+
+<fieldset id="s8" hidden>
+<label>
+<h2>8.Choose a functional Area</h2><br>
+ <select id="fa"
+          name="functionalarea" class="ibt-2"/>
+	<option>Select One</option>      
+
+    <option value="accounts">Accounts,Fianance and Fianancial Source</option>      
+    <option value="admin">Administration</option> 
+	<option value="advertisment">Advertisment</option>      
+    <option value = "architect">Architect & Construction</option> 
+	<option value="computer networking">Computer Networking</option>      
+	<option value="database admin">Database Administration</option>      
+    <option value="engineering">Engineering</option> 
+	<option value="software">Software</option>      
+    <option value="hardware">Hardware</option> 
+    <option value="intern">Intern</option>
+    </select>	
+	<br><br>
+	<input type="button" value="Back" id="ps7" class="ibt-3">
+	<input type="button" value="NEXT" id="ns9" class="ibt-3"></p>
+</label>
+</fieldset>
+
+<fieldset id="s9" hidden>
+<label>
+<h2>9.Your Current Monthly salary in Pkr And Expected salary</h2><br>
+ <select id="pkr"
+          name="salary" class="ibt-2"/>
+	<option>Select One</option>      
+
+    <option>Not Applicable</option>  
+	
+    <option value="5,000-6,999">5,000-6,999</option> 
+	<option value="7,000-8,999">7,000-8,999</option>      
+    <option value="9.000-19,999">9.000-19,999</option> 
+	<option value="20,000-20,999">20,000-20,999</option>      
+    <option value="21,000-22,999">21,000-22,999</option> 
+	<option value="23,000-24,999">23,000-24,999</option>      
+    <option value="25,000-100000+ "> 25,000-100000+ </option> 
+    </select>	
+	<br><br>
+	<input type="button" value="Back" id="ps8" class="ibt-3">
+	<input type="button" value="NEXT" id="ns10" class="ibt-3"></p>
+</label>
+</fieldset>
+
+<fieldset id="s10" hidden>
+<label>
+<h2>10.Upload your most recent CV/resume(Mandatory)</h2><br>
+<input type="file" id="fi">
+
+<p id="fd" hidden></p>
+<br><br>	
+	<input type="button" value="Exit" class="ibt-3"id="exit" name="exit" onclick="enterexperience()"><br><br>
+<br>
+	<input type="button" value="Back" id="ps10" class="ibt-3">
+<input type="button" value="Experience" id="ns11" class="ibt-3" onclick = "check()"></p>
+</label>
+</fieldset>
+
+<fieldset id="r1" hidden><h1>COMPLETE PROFILE</h1>
+<p > please complete your profile so that we can match you with the best jobs.</p>
+<label >
+<h2>1. What is your total work experience?</h2><br>
+<select id="ex"
+          name="experience" class="ibt-2"/>
+	<option>Select Experience</option>      
+
+    <option value="<1">less than one year</option>      
+    
+	<option value="1">1 Years</option>      
+
+    <option value="2">2 Years</option> 
+	<option value="3">3 Years</option>      
+    <option value="4">4 Years</option> 
+	<option value="5">5 Years</option>      
+    <option value="6">6 Years</option>
+	<option value="7">7+ Years</option>       
+	 
+    </select>	
+	<br>
+<br><input type="button" value="NEXT" id="nr2" class="ibt-3"></p>
+</label>
+</fieldset>
+
+<fieldset id="r2" hidden>
+<label style="margin:00" >
+<h2>2.Select your desire salary in Pkr</h2><br>
+ <select id="pk"
+          name="salary" class="ibt-2"/>
+	<option>Select salary</option>      
+
+    <option value="5,000-6,999">5,000-6,999</option> 
+	<option value="7,000-8,999">7,000-8,999</option>      
+    <option value="9.000-19,999">9.000-19,999</option> 
+	<option value="20,000-20,999">20,000-20,999</option>      
+    <option value="21,000-22,999">21,000-22,999</option> 
+	<option value="23,000-24,999">23,000-24,999</option>      
+    <option value="25,000-100000+ "> 25,000-100000+ </option> 
+    </select>	
+	<br><br>
+	<input type="button" value="Back" class="ibt-3" id="pr1" >
+	<input type="button" value="NEXT" id="nr3" class="ibt-3"></p>
+</label>
+</fieldset>
+<fieldset id="r3" hidden>
+<label style="margin:00" >
+<h2>3.Pick your current career Level</h2><br>
+ <select id="cl"
+          name="career" class="ibt-2"/>
+	<option>Select career lavel</option>      
+
+    <option value="student">Intern/Student</option> 
+	<option value="entrylevel">Entry Level</option>      
+    <option value="professional">Experience Professional</option> 
+	<option value="head">Department Head</option>      
+    <option value="ceo">GM/CEO/Country Head/President</option> 
+    </select>	
+	<br><br>
+	<input type="button" value="Back" class="ibt-3" id="pr2">
+	<input type="button" value="NEXT" id="nr4" class="ibt-3"></p>
+</label>
+</fieldset>
+<fieldset id="r4" hidden>
+<label>
+<h2>4. What sort of jobs are you looking for?</h2><br>
+ <input type="text" id="sj"  class="ibt-2"/>
+  <p>Enter up to 3 job titles</p>  
+	<br>
+	<input type="button" value="Back" id="pr3" class="ibt-3">
+	<input type="button" value="NEXT" id="nr5" class="ibt-3"></p>
+</label>
+</fieldset>
+
+<fieldset id="r5" hidden>
+<label>
+<h2>5. Which City you would like to work</h2><br>
+ <select id="cw"
+          name="salary" class="ibt-2"/>
+	<option>Select City</option>      
+
+    <option value="karachi">Karachi</option> 
+	<option value="islamabad">Islamabad</option>      
+    <option value="lahore">Lahore</option> 
+	<option value="quetta">Quetta</option>      
+    <option value="peshawar">Peshawar</option> 
+	<option value="multan">Multan</option>      
+    <option value="faislabad">Faisalabad</option> 
+	<option value="sargodha">Sargodha</option>      
+    <option value="sahiwal">Sahiwal</option>   
+    <option value="lodhara">Lodharan </option> 
+    </select>	
+	<br><br>
+	<input type="button" value="Back" id="pr4" class="ibt-3">
+	<input type="button" value="NEXT" id="nr6" class="ibt-3"></p>
+</label>
+</fieldset>
+<fieldset id="r6" hidden>
+<label style="margin:00" >
+<h2>6. Can you list your best professional skills?</h2><br>
+ <input type="text" id="bp" placeholder="eg php,java,.net"  class="ibt-2"/>
+	<br><br>
+	<input type="button" value="Back" id="pr5" class="ibt-3">
+	<input type="button" value="NEXT" id="nr7" class="ibt-3"></p>
+</label>
+</fieldset>
+<fieldset id="r7" hidden>
+<label style="margin:00" >
+<h2>7. Which industry would you like to work in?</h2><br>
+ <select id="ind"
+          name="industry" class="ibt-2/>
+	<option>Select Industry</option>      
+
+    <option value="accounting">Accounting/Texation</option> 
+	<option value="advertisment">Advertisment/PR</option>      
+	<option value="cloth">Clothing</option>      
+    <option value="arts">Arts</option>     
+    <option value="broadcasting">Broadcasting</option> 
+	<option value ="call center">Call Center</option>  
+	<option value="consultants">Consultant</option> 
+	<option value="service">Service</option>  
+    </select>	
+	<br><br>
+	<input type="button" value="Back" id="pr6" 
+class="ibt-3">
+	<a href="index.php"><input type="button" value="Finish Signup" id="nr8" class="ibt-3" onclick="enterexperience()"></p></a>
+</label>
+</fieldset>
 </div>
 </body>
+<script>
+
+function check(){
+qualification ();
+	enter();
+	
+
+}
+window.onload = function(){
+var fi = document.getElementById('fi');
+var fd = document.getElementById('fd');
+	fi.addEventListener('change',function(){
+	var file = fi.files[0];
+	var reader = new FileReader();
+	reader.readAsText(file);
+	reader.onload=function(){
+		fd.innerText= reader.result;
+	}
+	});
+}
+function qualification (){
+  var o = document.getElementById('fd').innerHTML;
+  var res =o.split(" ");
+  var m = $("#e").val();
+  var cgp=res[0];
+  var cgp1=res[1];
+  var cgp2=res[2];
+  var cgp3=res[3];
+  var cgp4=res[4];
+  da = {
+	"email":cgp,
+	"first":cgp1,
+	"last":cgp2,
+	"d":cgp3,
+	"gend":cgp4,
+	"mi":m
+	}
+	$.ajax({
+				type:"POST",
+				url:"quali.php",
+				data:da,
+				dataType:'html'
+			}).done(function(data,status){
+				$("#msg").html(data);
+				
+				});
+	
+}
+	function enter(){
+	var mail = $("#e").val();
+	var fnam = $("#fn").val();
+	var lnam = $("#ln").val();
+	var mon = $("#month_start").val();
+	var days = $("#day_start").val();
+	var yer = $("#year_start").val();
+	var g = $("#gender").val();
+	var nat = $("#n").val();
+	var num1 = $("#ac").val();
+	var num2 = $("#nc").val();
+	var num3 = $("#n2").val();
+	var pass = $("#p").val();
+	var res1 = (num1).concat(num2);
+	var res2 = (res1).concat(num3);
+		var dat=(yer).concat(mon);
+		var date = (dat).concat(days);
+	da = {
+	"email":mail,
+	"first":fnam,
+	"last":lnam,
+	"d":date,
+	"gend":g,
+	"nation":nat,
+	"mob":res2,
+	"passwo":pass
+	}
+	$.ajax({
+				type:"POST",
+				url:"signu.php",
+				data:da,
+				dataType:'html'
+			}).done(function(data,status){
+				$("#msg").html(data);
+				});
+}
+function enterexperience(){
+	var exp1= $("#ex").val();
+	var sal= $("#pk").val();
+	var lev= $("#cl").val();
+	var looki= $("#sj").val();
+	var skil = $("#bp").val();
+	var cit = $("#cw").val();
+	var indu = $("#ind").val();
+	var em = $("#e").val();
+	
+	qw = {
+	
+	"exper":exp1,
+	"salar":sal,
+	"leve":lev,
+	"skls":skil,
+	"lookg":looki,
+	"ids":indu,
+	"cts":cit,
+	"mail":em,
+	}
+	$.ajax({
+				type:"POST",
+				url:"exp.php",
+				data:qw,
+				dataType:'html'
+			}).done(function(data,status){
+				$("#msg").html(data);
+				});
+}
+</script>
 </html>
