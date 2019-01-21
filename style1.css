@@ -446,7 +446,7 @@ input.ra-input[type=submit]:hover
 
 /* Sami */
 
-body{
+body.sa_body{
     background:url("images/g.jpg");
     background-size:cover;
     font-family:Arial;
