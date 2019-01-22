@@ -8,6 +8,7 @@
 	  <meta http-equiv="pragma" content="no-cache" />
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	   <link rel="stylesheet" href="style1.css">
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
   function checkemail(){
@@ -23,7 +24,7 @@
   
   </script>
 </head>
-<body background="office.jpg" ;style="height:300px;width:400px">
+<body>
 
 
 
@@ -32,50 +33,26 @@
 <div class="row">
 <div class="col-md-4">
 </div>
-<div class="col-md-4 jumbotron text-center" style="background-color: #ffffff; opacity: .8; margin-top:90">
+<div class="col-md-4 ibt-1">
 <a href = "home.html"><h2 >RozeeRoti.pk</h2></a>
 
 <form method="post">
-<div class="form-group">
-<input type="text" class="form-control" placeholder="Email" id="em"
-name="em" style="margin-top:50" onblur="checkemail()">
+<input type="text" class="ibt-2" placeholder="Email" id="em"
+name="em" onblur="checkemail()">
 <p id="eres"></p>
-</div>
-<div class="form-group">
-<input type="password" class="form-control" id ="pass"
+
+<input type="password" class="ibt-2" id ="pass"
 name="pass" placeholder="Password">
-</div>
-<input name="submit" type="submit" value="Login">
+<input name="submit" type="submit" class="ibt-3"value="Login">
 </form>
 <br>
 <p >Don't have an account?<p>
 <a href = "signup.html"><p >Sign Up</p></a>
 <a href = "fogotpassword.html"><p >Forgot Password</p></a>
+
 </div>
 </div>
 </div>
-<div class="footer-bottom" style="background-color: white; opacity: .3">
-
-	<div class="container">
-
-		<div class="row">
-
-			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-				<div class="copyright ">
-
-					Copyright © 2017 ROZEERoti.PK -Jobs in Pakistan - All Rights Reserved.
-
-				</div>
-
-			</div>
-
-			
-
-		</div>
-
-	</div>
-	</div>
 </body>
 
 <?php if(isset($_POST['submit'])){
