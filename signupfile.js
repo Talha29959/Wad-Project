@@ -1,4 +1,5 @@
 $(document).ready(function(){
+        
 		$("#ns2").click(function(){
 		var reM = /^\w+([\._]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 		
@@ -21,6 +22,7 @@ $(document).ready(function(){
 			$("#s2").hide();$("#s3").hide();$("#s4").hide();$("#s5").hide();$("#s6").hide();$("#s7").hide();$("#s8").hide();
 			$("#s9").hide();$("#s10").hide();
 		});
+
 		$("#ns3").click(function(){
 		var reN = /^[A-Za-z]{1,25}$/;
 		var relN = /^[A-Za-z]{1,25}$/;

@@ -36,24 +36,8 @@ $(document).ready(function(){
 </style>
 </head>
 <BODY style="background-color: lightgray">
-<nav class="navbar navbar-inverse navbar-fixed-top" style="margin-top:0;margin-bottom: 30">
-<div class="container-fluid">
-	<div class="navbar-header">
-	<b><a class="navbar-brand" href="HOME.html">RozeeRoti.pk</a></b>
-	</div>
 
-  <ul class="nav navbar-nav navbar-right">  
-  <li><a href="#"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
-  <li><a href="file:///G:/Doc.%20of%20study/WAD/signIn.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
-  </ul>
-	<ul class="nav navbar-nav navbar-right">
-	<li class="active"><a href="#">HOME</a></li>
-	<li><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
-	<li><a href="#">Post a Job</a></li>
-  <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
-	</ul>
-	</div>
-</nav>
+ <?php include 'header1.php';?>
 <br>
 <br>
 <div id="boder" style="margin-left: 220px;margin-right: 430px; margin-top: 100px">
@@ -233,16 +217,17 @@ $(document).ready(function(){
 
 <div style="margin-left: 0; margin-top: 0">
 <ul id="boder" style="margin-left: -60; margin-right: 130; margin-top: 0;">
-<img src="rozeetarbiat.jpg" height="60" width="468" style=" background-attachment: fixed;">
+<img src="images/rozeetarbiat.jpg" height="60" width="468" style=" background-attachment: fixed;">
 </ul>
 <ul id="boder" style="margin-left: -60; margin-right: 130; margin-top: 0;">
   <h3>Accounts, Finance & Financial Services Jobs in Pakistan</h3>
-  <p>Are you hunting for Accounts, Finance & Financial Services Jobs in Pakistan? ROZEE.PK is your premier online destination for all Accounting Jobs currently available across Pakistan. Find and filter jobs as per your preferences and apply online using our simple and easy job application process. Make the right career move with ROZEE.PK!</p>
+  <p>Are you hunting for Accounts, Finance & Financial Services Jobs in Pakistan? ROZEEROTI.PK is your premier online destination for all Accounting Jobs currently available across Pakistan. Find and filter jobs as per your preferences and apply online using our simple and easy job application process. Make the right career move with ROZEEROTI.PK!</p>
 </ul>
 <ul>
-<button onclick="show()">vs</button>
+<button onclick="show()">Show</button>
 <br><br>
-<p id ='lot_num_result'> </p>
+<p id ="lot_num_result"> </p>
+<p id ="buyer_id_result"></p>
 
 </ul>
 </div>
@@ -257,22 +242,20 @@ $(document).ready(function(){
 <script>
 function show(){
   $.ajax({                                      
-        url: 'pro.php',      //the script to call to get data          
+        url: 'pro.php',      //the script to call to get data   
+        data:"",       
         dataType: 'json',
 success: function(data) {
-    $.each(data, function(i, row) {
-        var email1 = row.email;              
-        var qualification2 = row.qualification;           
-       
-
-        $('#lot_num_result').append(email1);
-        $('#buyer_id_result').append(qualification2);
-		
-        
-    )};
-	}
-	});
+    
+	$.each(data, function(i, item){
+	var email1 = data[i].email;
+    var qualification2=data[i].qualification;
+    $('#lot_num_result').append("<b>Email: </b>"+email1+"<b> Qualification: </b>"+qualification2)
+                  .append("<hr />");
+    
+  });
 }
-
+});
+}
 </script>
 </html>

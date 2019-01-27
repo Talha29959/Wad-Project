@@ -26,26 +26,10 @@
 </head>
 <body class="sa_body">
 
-<nav class="navbar navbar-inverse navbar-fixed-top" style="margin: 0">
-    <div class="container-fluid">
-        <div class="navbar-header col-">
-            <b><a class="navbar-brand" href="index.html">RozeeRoti.pk</a></b>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="active col-"><a href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li class="col-"><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
-            <li class="col-"><a href="postjob.html">Post a Job</a></li>
-            <li class="col-"><a href="contactus.html"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
-            <li class="col-"><a href="login.php"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
-            <li class="col-"><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
-        </ul>
-    </div>
-</nav>
-
-
+<?php include 'header1.php';?>
 
 <div  class="ibt-1">
-<a href = "home.php"><h2 >RozeeRoti.pk</h2></a>
+<a href = "index.php"><h2 >RozeeRoti.pk</h2></a>
 
 <form method="post">
 
@@ -56,18 +40,13 @@ name="pass" placeholder="Password">
 
 <input name="submit" type="submit" class="ibt-3" value="Login">
 
-<br>
+<br><br>
 <p >Don't have an account?<p>
 <a href = "signup.html"><p >Sign Up</p></a>
 <a href = "fogotpassword.html"><p >Forgot Password</p></a>
 </form>
 </div>
 </body>
-
-
-
-
-
 
 
 

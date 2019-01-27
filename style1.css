@@ -55,9 +55,7 @@
 * {
   box-sizing:border-box
 }
-body {font-family: Verdana,sans-serif; background:url("images/g.jpg"); background-size: cover;
-    background-size: 100% 100%;
-    font-family:Arial;}
+body {font-family: Verdana,sans-serif;}
 .mySlides {display:none}
 
 /* Slideshow container */
@@ -448,7 +446,7 @@ input.ra-input[type=submit]:hover
 
 /* Sami */
 
-body.sa_body{
+body{
     background:url("images/g.jpg");
     background-size:cover;
     font-family:Arial;

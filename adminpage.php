@@ -41,7 +41,7 @@ if($_SESSION['sesName']){
 $na = $_SESSION['sesName'];		
 }
 else{
-	header('Location: login.php');
+	header('Location: index.php');
 }
 ?>
 <BODY style="background-color: lightgray">
@@ -52,16 +52,11 @@ else{
 	</div>
 
   <ul class="nav navbar-nav navbar-right">  
-  <li><a href="#"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
+  
   <li><a href="logout.php"><span class="glyphicon glyphicon-user"></span>LOGOUT</a></li>
-  <li><a href="file:///G:/Doc.%20of%20study/WAD/signIn.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
+  
   </ul>
-	<ul class="nav navbar-nav navbar-right">
-	<li class="active"><a href="#">HOME</a></li>
-	<li><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
-	<li><a href="#">Post a Job</a></li>
-  <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
-	</ul>
+	
 	</div>
 </nav>
 <br>
@@ -247,32 +242,95 @@ else{
 </ul>
 <form method="post">
 <h3>To delete the post a job record</h3>
-<input type="text" id ="post" name="post" style="margin-left:-50;width:500; height:35;
-	color:black;font-size:15">
-	<button class="btn btn-outline-success btn-lg" style="text-align: center;margin-top:20;border-radius: 2px;
- height: 50px; width: 150px; background-color: blue; font-size: 20; color: white" type="submit" name="submit">
+<input type="text" id ="post" placeholder="Enter Email" name="post" style="width:300; height:35;
+	color:black;font-size:15"><br>
+	<button class="btn btn-outline-success btn-lg" style="text-align: center;margin-top:10;border-radius: 2px;
+ height: 40px; width: 100px; background-color: blue; font-size: 15; color: white" type="submit" name="submit">
 Delete
 </button>
 	</form>
-	<form method="post" >
-<h3>To delete the canidate record</h3>
-<input type="text" id ="cv" name= "cv" style="margin-left:-50;width:500; height:35;
+
+<form method="post">
+<h3>To update the job title</h3>
+<input type="text" placeholder="Enter Email" id ="post" name="post1" style="width:300px; height:35;
 	color:black;font-size:15">
-	<button class="btn btn-outline-success btn-lg" style="text-align: center;margin-top:20;border-radius: 2px;
- height: 50px; width: 150px; background-color: blue; font-size: 20; color: white" type="submi" name="submi">
-Delete
+<input type="text" placeholder="Enter Job title" id ="post" name="post2" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<br>
+	<button class="btn btn-outline-success btn-lg" style="text-align: center;margin-top:10;border-radius: 2px;
+ height: 40px; width: 100px; background-color: blue; font-size: 15; color: white" type="submit" name="submit2">
+Update
 </button>
 	</form>
-</div>
-</div>
 
+<form method="post">
+<h3>To Post a New job</h3>
+<input type="text" placeholder="Enter Email" id ="post" name="post1" style="width:300px; height:35;
+	color:black;font-size:15">
+<input type="text" placeholder="Enter Job title" id ="post" name="post2" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Job description" id ="post" name="post3" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Skills" id ="post" name="post4" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Career Level" id ="post" name="post5" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Position" id ="post" name="post6" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Job Location" id ="post" name="post7" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Qualification" id ="post" name="post8" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Qualification2" id ="post" name="post9" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Minimum Experience" id ="post" name="post10" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Maximum Experience" id ="post" name="post11" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Salary" id ="post" name="post12" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Gender" id ="post" name="post13" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<input type="text" placeholder="Enter Name" id ="post" name="post14" style="width:300px; height:35;
+	color:black;font-size:15;margin-top:10px">
+<br>
+	<button class="btn btn-outline-success btn-lg" style="text-align: center;margin-top:10;border-radius: 2px;
+ height: 40px; width: 100px; background-color: blue; font-size: 15; color: white" type="submit" name="submit3">
+Insert
+</button>
+	</form>
 
-
-<div class="col-md-3">
-</div>
-</div>
-</div>
 </BODY>
+
+<?php
+if(isset($_POST['submit3'])){
+session_start();
+$uname = $_POST['post1'];
+$uname2=$_POST['post2'];
+$uname3=$_POST['post3'];
+$uname4=$_POST['post4'];
+$uname5=$_POST['post5'];
+$uname6=$_POST['post6'];
+$uname7=$_POST['post7'];
+$uname8=$_POST['post8'];
+$uname9=$_POST['post9'];
+$uname10=$_POST['post10'];
+$uname11=$_POST['post11'];
+$uname12=$_POST['post12'];
+$uname13=$_POST['post13'];
+$uname14=$_POST['post14'];
+
+$c = mysqli_connect("localhost","root","","rozeeroti");
+$q = "INSERT INTO postajob (jobtitle, jobdescription, skills, careerlevel, position, joblocation,qualification,qualification2,expmin,expmax,salary,gender,name,email)
+VALUES ('$uname2', '$uname3','$uname4','$uname5','$uname6','$uname7','$uname8','$uname9','$uname10','$uname11','$uname12','$uname13','$uname14','$uname')";
+$re = mysqli_query($c,$q);
+if($re){
+			echo "<script>alert('Inserted');</script>";
+}
+mysqli_close($c);
+}
+?>
+
 <?php
 if(isset($_POST['submit'])){
 
@@ -287,21 +345,24 @@ if($re){
 mysqli_close($c);
 }
 ?>
+
 <?php
-if(isset($_POST['submi'])){
+if(isset($_POST['submit2'])){
 
-
-$unam = $_POST['cv'];
-echo "<script>alert('Deleted Canidate Record');</script>";
-$co = mysqli_connect("localhost","root","","rozeeroti");
-$qo = "delete from personalinformation where email = '$unam'";
-$reo = mysqli_query($co,$qo);
-if($reo){
-			echo "<script>alert('Deleted Canidate Record');</script>";
+session_start();
+$uname = $_POST['post1'];
+$uname2=$_POST['post2'];
+$c = mysqli_connect("localhost","root","","rozeeroti");
+$q = "update postajob set jobtitle='$uname2'where email = '$uname'";
+$re = mysqli_query($c,$q);
+if($re){
+			echo "<script>alert('Updated');</script>";
 }
 mysqli_close($c);
 }
 ?>
+
+
 </html>
 
 

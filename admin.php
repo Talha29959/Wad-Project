@@ -36,24 +36,7 @@ $(document).ready(function(){
 </style>
 </head>
 <BODY style="background-color: lightgray">
-<nav class="navbar navbar-inverse navbar-fixed-top" style="margin-top:0;margin-bottom: 30">
-<div class="container-fluid">
-	<div class="navbar-header">
-	<b><a class="navbar-brand" href="HOME.html">RozeeRoti.pk</a></b>
-	</div>
-
-  <ul class="nav navbar-nav navbar-right">  
-  <li><a href="#"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
-  <li><a href="file:///G:/Doc.%20of%20study/WAD/signIn.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
-  </ul>
-	<ul class="nav navbar-nav navbar-right">
-	<li class="active"><a href="#">HOME</a></li>
-	<li><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
-	<li><a href="#">Post a Job</a></li>
-  <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
-	</ul>
-	</div>
-</nav>
+<?php include 'header1.php';?>
 <br>
 <br>
 <div id="boder" style="margin-left: 220px;margin-right: 430px; margin-top: 100px">
@@ -233,7 +216,7 @@ $(document).ready(function(){
 
 <div style="margin-left: 0; margin-top: 0">
 <ul id="boder" style="margin-left: -60; margin-right: 130; margin-top: 0;">
-<img src="rozeetarbiat.jpg" height="60" width="468" style=" background-attachment: fixed;">
+<img src="images/rozeetarbiat.jpg" height="60" width="468" style=" background-attachment: fixed;">
 </ul>
 <ul id="boder" style="margin-left: -60; margin-right: 130; margin-top: 0;">
 <h3>Administration Jobs in Pakistan</h3>

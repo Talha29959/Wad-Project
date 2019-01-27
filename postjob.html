@@ -1,22 +1,5 @@
-<html>
+﻿<html>
 <head>
-<style>
-  .red {
-      color: white;
-		background-color: black;
-      font-size: 1em;
-
-  }
-
-  .blue {
-
-      color: blue;
-	background-color:yellow;
-      font-weight: bold;
-
-  }
-
- </style>
   <title>Post a job</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,14 +9,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <script src="postajob.js"></script>
 
-<<<<<<< Updated upstream
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style1.css">
-</head>
-<body class="sa_body">
-=======
   <script>
   function disableSubmit() {
   document.getElementById("submit").disabled = true;
@@ -47,77 +22,109 @@
        else  {
         document.getElementById("submit").disabled = true;
       }
->>>>>>> Stashed changes
 
   }
   function checknumber(){
 	var reC = /^\d{7}$/;
 	var cel = document.getElementById('n2').value;
-	if(!reC.test(cel)){
-		document.getElementById('cres').innerHTML = "Inavlid Cell No";
+document.getElementById('cres').innerHTML = " ";
+	if(!reC.test(cel)&&(cel!=0)){
+		document.getElementById('cres').innerHTML = "Invalid Cell No";
 	}
-	else{
+	else if(reC.test(cel)&&(cel!=0)){
 		document.getElementById('cres').innerHTML = "Valid Cell no";
 	}
-}
+	}
+
 function checkcnic(){
 	var reC = /^\d{13}$/;
 	var cel = document.getElementById('n3').value;
-	if(!reC.test(cel)){
-		document.getElementById('ccres').innerHTML = "Inavlid CNIC No";
+        document.getElementById('ccres').innerHTML = " ";
+	if(!reC.test(cel)&&(cel!=0)){
+		document.getElementById('ccres').innerHTML = "Invalid CNIC No";
 	}
-	else{
+	else if((reC.test(cel))&&(cel!=0)){
 		document.getElementById('ccres').innerHTML = "Valid CNIC no";
 	}
 }
   function checkEmail(){
 	var reM = /^\w+([\._]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 	var emm = document.getElementById('e').value;
-	if(!reM.test(emm)){
-		document.getElementById('eres').innerHTML = "Inavlid Mail";
+         document.getElementById('eres').innerHTML = " ";
+	if(!reM.test(emm)&&(emm!=0)){
+		document.getElementById('eres').innerHTML = "Invalid Mail";
 	}
-	else{
+	else if(reM.test(emm)&&(emm!=0)){
 		document.getElementById('eres').innerHTML = "Valid Mail";
 	}
 	}
-  
+function checkname(){
+	var req = /^[A-Za-z]+\s?[A-Za-z]+/;
+	var ren = document.getElementById('jotit').value;
+          document.getElementById('tres').innerHTML = " ";
+	if(!req.test(ren)&&(ren!=0)){
+		document.getElementById('tres').innerHTML = "Invalid Name";
+	}
+	else if(req.test(ren)&&(ren!=0)){
+		document.getElementById('tres').innerHTML = "Valid Name";
+	}
+	}
+function checkName(){
+	var req = /^[A-Za-z]+\s?[A-Za-z]+/;
+	var ren = document.getElementById('name').value;
+          document.getElementById('zres').innerHTML = " ";
+	if(!req.test(ren)&&(ren!=0)){
+		document.getElementById('zres').innerHTML = "Invalid Name";
+	}
+	else if(req.test(ren)&&(ren!=0)){
+		document.getElementById('zres').innerHTML = "Valid Name";
+	}
+	}
   </script>
 
 </head>
 <body onload="disableSubmit()">
-<nav class="navbar navbar-inverse navbar-fixed-top" style="margin: 0">
-    <div class="container-fluid">
-        <div class="navbar-header col-">
-            <b><a class="navbar-brand" href="index.html">RozeeRoti.pk</a></b>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="active col-"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li class="col-"><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
-            <li class="col-"><a href="postjob.html">Post a Job</a></li>
-            <li class="col-"><a href="contactus.html"><span class="glyphicon glyphicon-info-sign"></span>ABOUT US</a></li>
-            <li class="col-"><a href="login.php"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
-            <li class="col-"><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
-        </ul>
-    </div>
-</nav>
-<fieldset id="a1">
-<div>
 
-<div class="ibt-1">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="margin: 0">
+<div class="container-fluid">
+	<div class="navbar-header col-lg-6.4">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+	<b><a class="navbar-brand" href="index.php">RozeeRoti.pk</a></b>
+	</div>
+	<ul class="nav navbar-nav navbar-right collapse navbar-collapse col-lg-5.6" id="myNavbar">
+    <li class="active"><a href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+	<li class=""><a href="signup.html"><span class="glyphicon glyphicon-eye-open" aria-hidden=true></span> Free CV Review</a></li>
+	<li class=""><a href="postjob.html">Post a Job</a></li>
+  <li class=""><a href="contactus.html"><span class="glyphicon glyphicon-info-sign"></span>Contact US</a></li>
+  <li class=""><a href="login.php"><span class="glyphicon glyphicon-user"></span>LOGIN</a></li>
+  <li class=""><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span>SIGN UP</a></li>
+	</ul>
+	</div>
+</nav>
+
+
+<div>
+<fieldset id="a1">
+<div class="ibt-1" >
 <h1 > Post your first job in minutes! </h1><br>
 <label>Job Title*</label>
-<br><br>
-<input type="text" class="ibt-2" id="jotit">
-<br>
+
+<input type="text" class="ibt-2" id="jotit" placeholder="e.g Web" onblur="checkname()" required style="border-bottom: solid #eeeeee 1px;padding: 3px 10px">
+ <p id="tres" style="margin-left:0px;color:red"></p>
 <label>Job Description*</label>
-<br><textarea   style="margin-top:00;text:top;width:280; height:250;background-color:grey;
-color:black;font-size:18px" id="desc"></textarea>
+<br><textarea  placeholder="Please Enter Your Message " required style="margin-top:00;text:top;width:270; height:200;color:white;background-color:black;font-size:18px" id="desc"></textarea>
+<br><br>
 <label>What skills are required for this job?</label>
-<input type="text"  placeholder="Example PHP,HTML.CSS" class="ibt-2" id="skl">
+<input type="text"  placeholder="e.g PHP,HTML.CSS" class="ibt-2" required id="skl" style="border-bottom: solid #eeeeee 1px;padding: 3px 10px">
+<br><br>
 <label>Required career level for this job?</label>
-<label>No.of Position*</label>
-<br>
-<select id="leve" class="red"/>
+<label>No. of Position</label>
+
+<select id="leve" class="ibt-2" style="color:white;background-color:black" required/>
 	<option >Select career lavel</option>      
 
     <option value="student">Intern/Student</option> 
@@ -126,7 +133,7 @@ color:black;font-size:18px" id="desc"></textarea>
 	<option value="head">Department Head</option>      
     <option value="ceo">GM/CEO/Country Head/President</option> 
     </select>
-	<select id="cl1" class="red"/>
+	<select id="cl1" class="ibt-2" style="color:white;background-color:black" required/>
 	<option value="1">1</option>      
 
     <option value="2">2</option> 
@@ -146,8 +153,8 @@ color:black;font-size:18px" id="desc"></textarea>
 
 	<label>Job Location*</label>
 	<br>
-	<select id="cw" class="red"
-          name="salary"/>
+	<select id="cw" class="ibt-2"
+          name="salary" style="color:white;background-color:black" required/>
 	<option>Select City</option>      
 
     <option value="karachi">Karachi</option> 
@@ -161,9 +168,10 @@ color:black;font-size:18px" id="desc"></textarea>
     <option value="sahiwal">Sahiwal</option>   
     <option value="lodhara">Lodharan </option>
     </select>	
+<br><br>
 	<label>What minimum qualification is required?*</label>
 	<br>
-<select id="study" class="red" />
+<select id="study" class="ibt-2" style="color:white;background-color:black" required/>
 	<option>Select Degree Level</option>      
 
     <option value="nomatric">Non-Matriculation</option> 
@@ -176,16 +184,16 @@ color:black;font-size:18px" id="desc"></textarea>
     <option value="diploma">Diploma</option> 
 
     </select>
-	<select id="rank" class="red"/>
+	<select id="rank" class="ibt-2" style="color:white;background-color:black" required/>
 	<option value="high">or Higher</option>      
 
     <option value="exactly">Exactly</option> 
 	
     </select>
-	
+	<br><br>
 	<label>Years of experience required? *</label>
 	<br>
-	<select id="exp"class="red"/>
+	<select id="exp"class="ibt-2" style="color:white;background-color:black" required/>
 		<option value="min">Min</option>      
 
 	<option value="fresh">Fresh</option>      
@@ -200,7 +208,7 @@ color:black;font-size:18px" id="desc"></textarea>
 	<option value="7">7+ Years</option>      
   
     </select>
-	<select id="maxexp" class="red"/>
+	<select id="maxexp" class="ibt-2" style="color:white;background-color:black" required/>
 	<option value="max">Max</option>      
 	
 	
@@ -216,10 +224,11 @@ color:black;font-size:18px" id="desc"></textarea>
 	<option value="7">7+ Years</option>   
 
     </select>
+<br><br>
 	<label>What is the salary range? *</label>
 	<br>
 <select id="pk"
-          name="salary" class="red"/>
+          name="salary" class="ibt-2" style="color:white;background-color:black" required/>
 	<option>Select salary</option>      
 
     <option value="5,000-6,999">5,000-6,999</option> 
@@ -232,42 +241,47 @@ color:black;font-size:18px" id="desc"></textarea>
     </select>
 	<br><br>
 				<label>Is there a gender preference for this job?</label>
-		<br><br>
+
 		<select id="gender"
-          name="gender_start" class="red"/>
+          name="gender_start" class="ibt-2" style="color:white;background-color:black" required/>
 	<option value="nopreference">No Preference</option>      
 
     <option value="male">Male</option>      
     <option value="female">Female</option> 
     </select>
 	<br><br>	
-	<input type="checkbox" name="terms" id="terms" 
-	onchange="activateButton(this)">  I authorize ROZEEROTI.PK to post jobs of my company on its website.
+	<input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">  I authorize ROZEEROTI.PK to post jobs of my company on its website.
     <br><br>
 	<input type="submit" value="Continue" id="mi" class="ibt-3">	
 	</fieldset>
-	
+
+        
+        </div>
+	<form action="index.php" method="post">
 	<fieldset id="a2" hidden>
-	<div class="ibt-1" >
+	
+       <div class="ibt-1" >
 	<h2 >  You're minutes away from hiring the best!  </h2>
 	<br>
 	<label>Can you tell us your full name?*</label>
-
-	<input type="text" class="ibt-2" id="name">
+	<input type="text" class="ibt-2" id="name" onblur="checkName()" required style="border-bottom: solid #eeeeee 1px;padding: 3px 10px">
+        <p id="zres" style="margin-left:0;color:red"></p>
 	<br>
 	<label>Email address you check most often?*</label>
 
-	<input type="text"  id="e" class="ibt-2 onblur="checkEmail()">
-	<p id="eres"></p>
+	<input type="text"  id="e" class="ibt-2" required onblur="checkEmail()" style="border-bottom: solid #eeeeee 1px;padding: 3px 10px" >
+	<p id="eres" style="margin-left:0;color:red"></p>
+          <br>
 	<label>What company or organization are you with?*</label>
-	<input type="text"  id="com1" class="ibt-2">
-	<br>
+	<input type="text"  id="com1" class="ibt-2" required style="border-bottom: solid #eeeeee 1px;padding: 3px 10px">
+	<br><br>
 	<label>Now, set a password for your account.*</label>
-	<input type="password" class="ibt-2"   id="pwd">
+	<input type="password" class="ibt-2  required id="pwd" style="border-bottom: solid #eeeeee 1px;padding: 3px 10px">
+<br><br>
 	<label>Best number to reach you at?*</label>
-	<br>
+	
 	<select id="ac"
-          name="areacode" " class="red"/>
+          name="areacode" " class="ibt-2" style="color:white;background-color:black" required/>
 	<option value="+92" >+92</option>      
 
     <option value="+91">+91</option>      
@@ -277,7 +291,7 @@ color:black;font-size:18px" id="desc"></textarea>
     </select>
 
 <select id="nc"
-          name="numbercode" class="red"/>
+          name="numbercode" class="ibt-2" style="color:white;background-color:black" required/>
 	<option>Code</option>      
 
     <option value="301">301</option>      
@@ -286,12 +300,13 @@ color:black;font-size:18px" id="desc"></textarea>
 	<option value="312">312</option>      
     <option value="333">333 </option> 
     </select>
-	<input type="text" id="n2" class="ibt-2" "onblur="checknumber()" >
-	<p id="cres"></p>
+	<input type="text" id="n2" class="ibt-2" placeholder="e.g 6344545" required "onblur="checknumber()" style="border-bottom: solid #eeeeee 1px;padding: 3px 10px">
+	<p id="cres" style="margin-left:0;color:red"></p>
+        <br>
 	<label>City</label>
 
 	<select id="city"
-          name="salary" class="red"/>
+          name="salary" class="ibt-2" style="color:white;background-color:black" required/>
 	<option>Select City</option>      
 
     <option value="karachi">Karachi</option> 
@@ -305,16 +320,22 @@ color:black;font-size:18px" id="desc"></textarea>
     <option value="sahiwal">Sahiwal</option>   
     <option value="lodhara">Lodharan </option>
     </select>	
-	
+	<br><br>
 	<label > Your CNIC number </label>
-	<input type="text" id="n3"class="ibt-2" placeholder="Enter CNIC W/O dashes"onblur="checkcnic()">
-	<p id="ccres"></p>
-	<br>
-	<a href="index.php"><input type="submit" value="Submit" id="submit" class="ibt-2" onclick="postjob()"></a>
+	<input type="text" id="n3"class="ibt-2" required placeholder="Enter CNIC e.g 3110435050156" onblur="checkcnic()" style="border-bottom: solid #eeeeee 1px;padding: 3px 10px">
+	<p id="ccres" style="margin-left:0;color:red"></p>
+	
+	<input type="submit" value="Submit" id="submit" class="ibt-3" onclick="postjob()">
+        </form>
+     
 	</fieldset><br>
-	</div>
-	<p style="font:15px;color:white">Looking for assistance? Call: ‎0305-7456545 (ROZEEROTI)‎<p>
+	
+
+    <div>
+	<p style="font:15px;color:white">Looking for assistance? Call: ‎03336344545- (ROZEEROTI)‎<p>
+
 </div>
+
 </body>
 <script>
 	function postjob(){

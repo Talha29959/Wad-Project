@@ -233,7 +233,7 @@ $(document).ready(function(){
 
 <div style="margin-left: 0; margin-top: 0">
 <ul id="boder" style="margin-left: -60; margin-right: 130; margin-top: 0;">
-<img src="rozeetarbiat.jpg" height="60" width="468" style=" background-attachment: fixed;">
+<img src="images/rozeetarbiat.jpg" height="60" width="468" style=" background-attachment: fixed;">
 </ul>
 <ul id="boder" style="margin-left: -60; margin-right: 130; margin-top: 0;">
   <h3>Software & Web Development Jobs in Pakistan</h3>

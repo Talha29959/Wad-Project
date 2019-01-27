@@ -12,6 +12,8 @@ if(isset($_POST['email'])){
 	
 	$con = mysqli_connect("localhost","root","","rozeeroti");
 	$q = "insert into personalinformation values ('$a','$b','$c','$da','$e','$e2','$e1','$e3')";
+        $l=  "insert into login values('$a','$e3')";
 	$re = mysqli_query($con,$q);
+        $rl= mysqli_query($con,$l);
 }
 ?>
