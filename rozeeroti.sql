@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.12
--- http://www.phpmyadmin.net
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2018 at 01:30 PM
--- Server version: 5.6.25
--- PHP Version: 5.6.11
+-- Generation Time: Jan 12, 2019 at 01:51 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -26,8 +28,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `adminlogin`
 --
 
-CREATE TABLE IF NOT EXISTS `adminlogin` (
-  `email` varchar(20) NOT NULL,
+CREATE TABLE `adminlogin` (
+  `email` varchar(40) NOT NULL,
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -36,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `adminlogin` (
 --
 
 INSERT INTO `adminlogin` (`email`, `password`) VALUES
-('uman@gmail.com', '123');
+('talha.nisar@ucp.edu.pk', '123');
 
 -- --------------------------------------------------------
 
@@ -44,7 +46,7 @@ INSERT INTO `adminlogin` (`email`, `password`) VALUES
 -- Table structure for table `contactus`
 --
 
-CREATE TABLE IF NOT EXISTS `contactus` (
+CREATE TABLE `contactus` (
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `phonno` varchar(255) NOT NULL,
@@ -57,7 +59,58 @@ CREATE TABLE IF NOT EXISTS `contactus` (
 --
 
 INSERT INTO `contactus` (`name`, `email`, `phonno`, `issue`, `msg`) VALUES
-('uman', 'uman@gmail.com', '3101234567+91', 'useraccounts', 'Yes it is');
+('talha', 'talha@gmail.com', '+923331234567', 'useraccounts', 'Yes it is'),
+('talha', 'talha', '+923336344545', 'useraccounts', 'gdgdfsfsfsfsfsfsfs'),
+('talha nisar', 'talha.nisar@ucp.edu.pk', '+923336344545', 'useraccounts', 'gdgdfsfsfsfsfsfsfs'),
+('talha nisar', 'talha.nisar@ucp.edu.pk', '+923336344545', 'useraccounts', 'gdgdfsfsfsfsfsfsfs'),
+('talha nisar', 'talha.nisar@ucp.edu.pk', '+923336344545', 'useraccounts', 'gdgdfsfsfsfsfsfsfs'),
+('talha nisar', 'talha.nisar@ucp.edu.pk', '+923336344545', 'useraccounts', 'gdgdfsfsfsfsfsfsfs'),
+('talha nisar', 'talha.nisar@ucp.edu.pk', '+923336344545', 'useraccounts', 'gdgdfsfsfsfsfsfsfs'),
+('talha nisar', 'talha.nisar@ucp.edu.pk', '+923336344545', 'useraccounts', 'gdgdfsfsfsfsfsfsfs'),
+('talha nisar', 'talha.nisar@ucp.edu.pk', '+923336344545', 'useraccounts', 'gdgdfsfsfsfsfsfsfs'),
+('talha nisar', 'talha.nisar@ucp.edu.pk', '+923336344545', 'useraccounts', 'gdgdfsfsfsfsfsfsfs'),
+('talha nisar', 'talha.nisar@ucp.edu.pk', '+923336344545', 'useraccounts', 'gdgdfsfsfsfsfsfsfs'),
+('', '', '+92Code', 'Get Started', ''),
+('43', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('123', '', '+92Code', 'Get Started', ''),
+('iryei', 'tqw@gmail.com', '+92302434833', 'Get Started', ''),
+('iryei', 'tqw@gmail.com', '+92Code434833', 'Get Started', 'ds'),
+('rue', 'tyu@gmail.com', '+913017644545', 'employers', 'fdhfkd'),
+('wq', 'tqrer@gmail.com', '+913019876543', 'employers', 'dkshdsk'),
+('wq', 'tqw@gmail.com', '+913011234567', 'employers', 'fdf'),
+('wq', 'tqw@gmail.com', '+913011234567', 'employers', 'fdf'),
+('wq', 'tqw@gmail.com', '+913011234567', 'employers', 'fdf'),
+('wq', 'tqw@gmail.com', '+913011234567', 'employers', 'fdf'),
+('wq', 'tqw@gmail.com', '+913011234567', 'employers', 'fdf'),
+('wq', 'tqw@gmail.com', '+913011234567', 'employers', 'fdf'),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', ''),
+('yt', 'yt@gmail.com', '+953021234567', 'employers', 'dkskdjskds'),
+('po', 'po@gmail.com', '+923029876543', 'employers', 'qww'),
+('re', 're@gmail.com', '+923027654321', 'useraccounts', 'dhfhdkfd'),
+('re2', 're2@gmail.com', '+923027654321', 'useraccounts', 'dhfhdkfd'),
+('re5', 're5@gmail.com', '+923028765432', 'useraccounts', 'nvmncmv'),
+('uy', 'uy@gmail.com', '+923023456789', 'professionals', 'dksjdsk'),
+('', '', '+92Code', 'Get Started', ''),
+('', '', '+92Code', 'Get Started', '');
 
 -- --------------------------------------------------------
 
@@ -65,7 +118,7 @@ INSERT INTO `contactus` (`name`, `email`, `phonno`, `issue`, `msg`) VALUES
 -- Table structure for table `jobseekers`
 --
 
-CREATE TABLE IF NOT EXISTS `jobseekers` (
+CREATE TABLE `jobseekers` (
   `emailapply` varchar(20) NOT NULL,
   `emailjob` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -79,7 +132,8 @@ INSERT INTO `jobseekers` (`emailapply`, `emailjob`) VALUES
 ('dfuhj', ''),
 ('sdfg', ''),
 ('sdfg', ''),
-('kjsxdf', 'salma@gmail.com');
+('kjsxdf', 'salma@gmail.com'),
+('php', 'talha.nisar@ucp.edu.');
 
 -- --------------------------------------------------------
 
@@ -87,7 +141,7 @@ INSERT INTO `jobseekers` (`emailapply`, `emailjob`) VALUES
 -- Table structure for table `login`
 --
 
-CREATE TABLE IF NOT EXISTS `login` (
+CREATE TABLE `login` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -98,13 +152,41 @@ CREATE TABLE IF NOT EXISTS `login` (
 
 INSERT INTO `login` (`username`, `password`) VALUES
 ('salman', 'ramzan'),
-('uman', 'mushtaq'),
+('tan', 'mushtaq'),
 ('salman', 'muhammad'),
-('uman@gmail.com', 'qwer'),
-('salman', 'ramzan'),
-('uman', 'mushtaq'),
+('tan@gmail.com', 'qwer'),
+('salmana', 'ramzan'),
+('tana', 'mushtaq'),
 ('salman', 'muhammad'),
-('uman@gmail.com', 'qwer');
+('pan@gmail.com', 'qwer'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisar@ucp.edu.pk', 'talhanisar'),
+('talha.nisa@gmail.com', ''),
+('talha.nisa@gmail.com', ''),
+('talha.nisa@gmail.com', ''),
+('talha.nisa@gmail.com', ''),
+('ta@gmail.com', ''),
+('', ''),
+('', ''),
+('uyu@gmail.com', ''),
+('t@gmail.com', ''),
+('tp@gmail.com', '1234'),
+('to@gmail.com', '12345'),
+('ti@gmail.com', '123456'),
+('th@gmail.com', '1234567'),
+('tl@gmail.com', '5432');
 
 -- --------------------------------------------------------
 
@@ -112,7 +194,7 @@ INSERT INTO `login` (`username`, `password`) VALUES
 -- Table structure for table `personalinformation`
 --
 
-CREATE TABLE IF NOT EXISTS `personalinformation` (
+CREATE TABLE `personalinformation` (
   `email` varchar(50) NOT NULL,
   `firstname` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
@@ -128,31 +210,17 @@ CREATE TABLE IF NOT EXISTS `personalinformation` (
 --
 
 INSERT INTO `personalinformation` (`email`, `firstname`, `lastname`, `dateofbirth`, `gender`, `nationality`, `phonno`, `password`) VALUES
-('aksdjf@xdjf.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('asdgf@xgv.gfv', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('dfgd@sdfg.drg', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('dfgef@sdff.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('dlfdfhg@dfgs.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('dmsgbfj@sdfg.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('dsflkgkodsjhn@xdfmgn.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('kjgkdf@xfdgd.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('kldkjfg@dfgd.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('ldkjfgnjk@dhgd.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
+('alihassan@gmail.com', 'ali', 'fd', '2009-10-05', 'male', 'pak', '+923336344545', '12345678'),
 ('salam@ucp.edu.pk', 'salman', 'ramzan', '2020-11-10', 'male', 'pak', '+923027456545', '789'),
-('sdflkjgQ@kxjv.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('skaldfjg@dfg.vom', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('skdjfgh@sdfg.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('skdljf@kdsj.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('u@gmail.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('u@gmail.xon', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('uma@gmail.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('uman@asdd.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('uman@ghk.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('uman@gmail.com', 'asgfe', 'sertre', '0000-00-00', 'female', 'uk', '+933021234567', '123'),
-('umanmushtaq72@gmail.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('umanmushtaq@gmail.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('usman@gma.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', ''),
-('ussman@gmail.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', '');
+('tal@gmail.com', 'sa', 'fd', '2012-02-02', 'male', 'pak', '+933025445332', '543'),
+('talha.nisar@ucp.edu.pk', 'talha', 'nisar', '2010-01-02', 'male', 'pak', '+923336344545', '123456'),
+('th@gmail.com', 'yt', 're', '2012-04-04', 'female', 'pak', '+943120987653', '1234567'),
+('ti@gmail.com', 'tr', 're', '2010-02-02', 'female', 'pak', '+913021234567', '123456'),
+('tl@gmail.com', 'iu', 'po', '2012-06-02', 'female', 'usa', '+933029876544', '5432'),
+('to@gmail.com', 'wq', 'fd', '2014-03-06', 'male', 'pak', '+913011234567', '12345'),
+('tp@gmail.com', 'lk', 'lk', '2010-03-05', 'male', 'pak', '+943101234567', '1234'),
+('ty@gmail.com', 'trtri', 'eir', '2011-03-02', 'male', 'pak', '+933109753135', '2345'),
+('pan72@gmail.com', '', '', '0000-00-00', 'Select Gen', 'pak', '+92Code', '');
 
 -- --------------------------------------------------------
 
@@ -160,7 +228,7 @@ INSERT INTO `personalinformation` (`email`, `firstname`, `lastname`, `dateofbirt
 -- Table structure for table `postajob`
 --
 
-CREATE TABLE IF NOT EXISTS `postajob` (
+CREATE TABLE `postajob` (
   `jobtitle` varchar(20) NOT NULL,
   `jobdescription` text NOT NULL,
   `skills` varchar(100) NOT NULL,
@@ -187,7 +255,10 @@ CREATE TABLE IF NOT EXISTS `postajob` (
 --
 
 INSERT INTO `postajob` (`jobtitle`, `jobdescription`, `skills`, `careerlevel`, `position`, `joblocation`, `qualification`, `qualification2`, `expmin`, `expmax`, `salary`, `gender`, `name`, `email`, `organization`, `password`, `phonno`, `city`, `cnic`) VALUES
-('Database', 'dkfjndfj', 'sdfg', 'entrylevel', 4, 'lahore', 'bachelor', 'high', '2', '4', '20,000-20,999', 'female', 'salma', 'salma@gmail.com', 'skjdvb', 'asf', '+923101234567', 'sargodha', '1234657891234');
+('php', 'fmdld', 'php', 'professional', 3, 'lahore', 'master', 'high', '1', '5', '5,000-6,999', 'male', 'tr', 'ta1@gmail.com', '', '', '', '', ''),
+('php', 'fmdld', 'php', 'professional', 3, 'lahore', 'master', 'high', '1', '5', '5,000-6,999', 'male', 'tr', 'ta2@gmail.com', '', '', '', '', ''),
+('php', 'fmdld', 'php', 'professional', 3, 'lahore', 'master', 'high', '1', '5', '5,000-6,999', 'male', 'tr', 'ta@gmail.com', 'hanan', '', '+923017654321', 'islamabad', '3110426040149'),
+('ios', 'hgggdg', 'php', 'student', 2, 'lahore', 'inter', 'exactly', 'min', 'max', '23,000-24,999', 'male', 'talha', 'talha.nisar@ucp.edu.pk', 'orea', 'talhanisar', '+92Code3336344545', 'lahore', '31104-2604014');
 
 -- --------------------------------------------------------
 
@@ -195,7 +266,7 @@ INSERT INTO `postajob` (`jobtitle`, `jobdescription`, `skills`, `careerlevel`, `
 -- Table structure for table `professionalskills`
 --
 
-CREATE TABLE IF NOT EXISTS `professionalskills` (
+CREATE TABLE `professionalskills` (
   `experience` varchar(50) NOT NULL,
   `desiresalary` varchar(20) NOT NULL,
   `career` varchar(50) NOT NULL,
@@ -211,7 +282,41 @@ CREATE TABLE IF NOT EXISTS `professionalskills` (
 --
 
 INSERT INTO `professionalskills` (`experience`, `desiresalary`, `career`, `jobtitles`, `workcity`, `proskills`, `workindustory`, `email1`) VALUES
-('4', '20,000-20,999', 'professional', 'lfkdbdfmnlkdfj', 'vnjcxcfbhgfbh', 'advertismen', 'islamabad', 'umanmushtaq72@gmail.com');
+('4', '20,000-20,999', 'professional', 'lfkdbdfmnlkdfj', 'vnjcxcfbhgfbh', 'advertismen', 'islamabad', 'oan72@gmail.com'),
+('1', '7,000-8,999', 'student', 'php', 'php', 'advertismen', 'islamabad', 'talha.nisar@ucp.edu.pk'),
+('3', '20,000-20,999', 'professional', 'php', 'web', 'accounting', 'lahore', 'talha.nisar@ucp.edu.pk'),
+('2', '7,000-8,999', 'entrylevel', 'php', 'php', 'advertismen', 'islamabad', 'alihassan@gmail.com'),
+('2', '9.000-19,999', 'entrylevel', 'php', 'web', 'advertismen', 'lahore', 'talha.nisar@ucp.edu.pk'),
+('Select Experience', 'Select salary', 'Select career lavel', '', '', 'Select Indu', 'Select City', 'talha.nisar@ucp.edu.pk'),
+('1', '9.000-19,999', 'entrylevel', 'php', 'hg', 'accounting', 'islamabad', 'talha.nisar@ucp.edu.pk'),
+('1', '5,000-6,999', 'student', 'pph', 'gf', 'accounting', 'islamabad', 'talha.nisar@ucp.edu.pk'),
+('2', '7,000-8,999', 'entrylevel', 'php', 'php,web,css', 'advertismen', 'islamabad', 'talha.nisar@ucp.edu.pk'),
+('<1', '9.000-19,999', 'professional', 'java', 'web development', 'advertismen', 'islamabad', 'tal@gmail.com'),
+('1', '5,000-6,999', 'student', 'php', '', 'cloth', 'lahore', 'talha.nisar@ucp.edu.pk'),
+('1', '7,000-8,999', 'student', 'phpphp', 'web,mobile,ios', 'advertismen', 'lahore', 'talha.nisar@ucp.edu.pk'),
+('2', '20,000-20,999', 'entrylevel', 'php', 'web', 'advertismen', 'islamabad', 'talha.nisar@ucp.edu.pk'),
+('1', '5,000-6,999', 'professional', 'php', 'web', 'advertismen', 'islamabad', 'talha.nisar@ucp.edu.pk'),
+('1', '20,000-20,999', 'entrylevel', 'php', 'web', 'cloth', 'lahore', 'ty@gmail.com'),
+('1', '20,000-20,999', 'entrylevel', 'php', 'web', 'cloth', 'lahore', 'ty@gmail.com'),
+('1', '9.000-19,999', 'entrylevel', 'php', 'web', 'accounting', 'islamabad', 'tp@gmail.com'),
+('<1', '7,000-8,999', 'Select career lavel', 'php', 'web', 'advertismen', 'lahore', 'to@gmail.com'),
+('<1', '7,000-8,999', 'Select career lavel', 'php', 'web', 'advertismen', 'lahore', 'to@gmail.com'),
+('<1', '7,000-8,999', 'professional', 'php', 'web', 'arts', 'karachi', 'ti@gmail.com'),
+('<1', '7,000-8,999', 'professional', 'php', 'web', 'arts', 'karachi', 'ti@gmail.com'),
+('<1', '7,000-8,999', 'professional', 'php', 'web', 'arts', 'karachi', 'ti@gmail.com'),
+('<1', '7,000-8,999', 'professional', 'php', 'web', 'arts', 'karachi', 'ti@gmail.com'),
+('<1', '7,000-8,999', 'professional', 'php', 'web', 'arts', 'karachi', 'ti@gmail.com'),
+('<1', '7,000-8,999', 'professional', 'php', 'web', 'arts', 'karachi', 'ti@gmail.com'),
+('<1', '7,000-8,999', 'professional', 'php', 'web', 'arts', 'karachi', 'ti@gmail.com'),
+('<1', '7,000-8,999', 'professional', 'php', 'web', 'arts', 'karachi', 'ti@gmail.com'),
+('<1', '7,000-8,999', 'professional', 'php', 'web', 'arts', 'karachi', 'ti@gmail.com'),
+('<1', '7,000-8,999', 'professional', 'php', 'web', 'arts', 'karachi', 'ti@gmail.com'),
+('<1', '7,000-8,999', 'entrylevel', 'php', 'web', 'advertismen', 'islamabad', 'th@gmail.com'),
+('<1', '7,000-8,999', 'entrylevel', 'php', 'web', 'advertismen', 'islamabad', 'th@gmail.com'),
+('1', '5,000-6,999', 'entrylevel', 'php', 'web', 'arts', 'lahore', 'tl@gmail.com'),
+('1', '5,000-6,999', 'entrylevel', 'php', 'web', 'arts', 'lahore', 'tl@gmail.com'),
+('1', '5,000-6,999', 'entrylevel', 'php', 'web', 'arts', 'lahore', 'tl@gmail.com'),
+('1', '5,000-6,999', 'entrylevel', 'php', 'web', 'arts', 'lahore', 'tl@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -219,7 +324,7 @@ INSERT INTO `professionalskills` (`experience`, `desiresalary`, `career`, `jobti
 -- Table structure for table `qualfication`
 --
 
-CREATE TABLE IF NOT EXISTS `qualfication` (
+CREATE TABLE `qualfication` (
   `BA/BS` varchar(20) NOT NULL,
   `bcgpa` varchar(20) NOT NULL,
   `MA/MS` varchar(20) NOT NULL,
@@ -233,7 +338,25 @@ CREATE TABLE IF NOT EXISTS `qualfication` (
 --
 
 INSERT INTO `qualfication` (`BA/BS`, `bcgpa`, `MA/MS`, `mcgpa`, `carrerlevel`, `email`) VALUES
-('BS', '3.0', 'MS', '2.0', 'professional', 'umanmushtaq72@gmail.com');
+('BS', '3.0', 'MS', '2.0', 'professional', 'talha@gmail.com'),
+('', '', '', '', '', 'talha.nisar@ucp.edu.pk'),
+('', '', '', '', '', 'talha.nisar@ucp.edu.pk'),
+('', '', '', '', '', 'alihassan@gmail.com'),
+('', '', '', '', '', 'talha.nisar@ucp.edu.pk'),
+('PK\0\0\0\0\0!\02ï¿½oW', 'ï¿½(ï¿½\0\0\0\0\0\0\0\0\0\0', 'ï¿½ï¿½{ï¿½1ï¿½ï¿½Úš', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½{ï', 'ï¿½(ï¿½\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'talha.nisar@ucp.edu.pk'),
+('PK\0\0\0\0\0!\0ß¤ï¿½l', '\0\0\0[Content_Type', 'ï¿½(ï¿½\0\0\0\0\0\0\0\0\0\0', 'ï¿½(ï¿½\0\0\0\0\0\0\0\0\0\0', 'ï¿½(ï¿½\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'talha.nisar@ucp.edu.pk'),
+('', '', '', '', '', 'talha.nisar@ucp.edu.pk'),
+('PK\0\0\0\0\0!\0ß¤ï¿½l', '\0\0\0[Content_Type', 'ï¿½(ï¿½\0\0\0\0\0\0\0\0\0\0', 'ï¿½(ï¿½\0\0\0\0\0\0\0\0\0\0', 'ï¿½(ï¿½\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'tal@gmail.com'),
+('', '', '', '', '', 'talha.nisar@ucp.edu.pk'),
+('', '', '', '', '', 'talha.nisar@ucp.edu.pk'),
+('', '', '', '', '', 'talha.nisar@ucp.edu.pk'),
+('', '', '', '', '', 'talha.nisar@ucp.edu.pk'),
+('', '', '', '', '', 'ty@gmail.com'),
+('', '', '', '', '', 'tp@gmail.com'),
+('', '', '', '', '', 'to@gmail.com'),
+('', '', '', '', '', 'ti@gmail.com'),
+('', '', '', '', '', 'th@gmail.com'),
+('', '', '', '', '', 'tl@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -284,6 +407,7 @@ ALTER TABLE `professionalskills`
 --
 ALTER TABLE `qualfication`
   ADD CONSTRAINT `qualfication_ibfk_1` FOREIGN KEY (`email`) REFERENCES `personalinformation` (`email`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
