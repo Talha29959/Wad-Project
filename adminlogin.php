@@ -36,12 +36,12 @@
 <form method="post">
 <div class="form-group">
 <input type="text" class="form-control" autofocus placeholder="Email" id="em"
-name="em" style="margin-top:50" onblur="checkemail()">
+name="em" style="margin-top:50"  value="<?php echo @$_COOKIE['em']?>" onblur="checkemail()">
 <p id="eres"></p>
 </div>
 <div class="form-group">
 <input type="password" class="form-control" id ="pass"
-name="pass" placeholder="Password">
+name="pass"  value="<?php echo @$_COOKIE['pass']?>" placeholder="Password">
 </div>
 <input name="submit" type="submit" value="Login">
 </form>
